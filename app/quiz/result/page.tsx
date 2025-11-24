@@ -65,10 +65,10 @@ export default function QuizResultPage() {
 
   if (!session) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
         <div className="text-center">
-          <div className="text-2xl font-bold text-gray-900 mb-2">結果を集計中...</div>
-          <div className="text-gray-600">しばらくお待ちください</div>
+          <div className="text-2xl font-bold text-gray-900 dark:text-white mb-2">結果を集計中...</div>
+          <div className="text-gray-600 dark:text-gray-400">しばらくお待ちください</div>
         </div>
       </div>
     );
@@ -79,12 +79,12 @@ export default function QuizResultPage() {
   const avgTime = questions.reduce((sum, q) => sum + (q.time_spent || 0), 0) / questions.length;
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8 px-4">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8 px-4">
       <div className="max-w-4xl mx-auto">
         {/* ヘッダー */}
         <div className="mb-8 text-center">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">クイズ結果</h1>
-          <p className="text-gray-600">
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">クイズ結果</h1>
+          <p className="text-gray-600 dark:text-gray-400">
             {session.mode === 'random' && '全用語からランダム出題'}
             {session.mode === 'category' && `カテゴリ: ${session.category}`}
             {session.mode === 'weakness' && '苦手な用語を優先'}
@@ -92,33 +92,33 @@ export default function QuizResultPage() {
         </div>
 
         {/* スコアサマリー */}
-        <div className="bg-white rounded-lg shadow-sm p-8 mb-6">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-8 mb-6">
           <div className="text-center mb-6">
-            <div className="text-6xl font-bold text-gray-900 mb-2">
+            <div className="text-6xl font-bold text-gray-900 dark:text-white mb-2">
               {score.correct} / {score.total}
             </div>
-            <div className="text-xl text-gray-600">正解数</div>
+            <div className="text-xl text-gray-600 dark:text-gray-400">正解数</div>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <div className="text-center p-4 bg-gray-50 rounded-lg">
-              <div className="text-3xl font-bold text-blue-600 mb-1">
+            <div className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-1">
                 {accuracy.toFixed(1)}%
               </div>
-              <div className="text-sm text-gray-600">正答率</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">正答率</div>
             </div>
-            <div className="text-center p-4 bg-gray-50 rounded-lg">
-              <div className="text-3xl font-bold text-green-600 mb-1">
+            <div className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+              <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-1">
                 {avgTime.toFixed(1)}秒
               </div>
-              <div className="text-sm text-gray-600">平均回答時間</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">平均回答時間</div>
             </div>
           </div>
         </div>
 
         {/* 問題ごとの詳細 */}
-        <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">問題詳細</h2>
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 mb-6">
+          <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">問題詳細</h2>
           <div className="space-y-3">
             {questions.map((question, index) => {
               const term = terms.find(t => t.id === question.term_id);
@@ -129,27 +129,27 @@ export default function QuizResultPage() {
                   key={index}
                   className={`p-4 border-2 rounded-lg ${
                     question.is_correct
-                      ? 'border-green-200 bg-green-50'
-                      : 'border-red-200 bg-red-50'
+                      ? 'border-green-200 dark:border-green-700 bg-green-50 dark:bg-green-900/30'
+                      : 'border-red-200 dark:border-red-700 bg-red-50 dark:bg-red-900/30'
                   }`}
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex-1">
                       <div className="flex items-center mb-1">
-                        <span className="text-sm text-gray-600 mr-2">問題 {index + 1}</span>
+                        <span className="text-sm text-gray-600 dark:text-gray-400 mr-2">問題 {index + 1}</span>
                         <span
                           className={`text-lg font-bold ${
-                            question.is_correct ? 'text-green-600' : 'text-red-600'
+                            question.is_correct ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'
                           }`}
                         >
                           {question.is_correct ? '✓ 正解' : '✗ 不正解'}
                         </span>
                       </div>
-                      <div className="font-medium text-gray-900">{term.term}</div>
-                      <div className="text-sm text-gray-600">{term.short_desc}</div>
+                      <div className="font-medium text-gray-900 dark:text-white">{term.term}</div>
+                      <div className="text-sm text-gray-600 dark:text-gray-400">{term.short_desc}</div>
                     </div>
                     <div className="text-right ml-4">
-                      <div className="text-sm text-gray-500">
+                      <div className="text-sm text-gray-500 dark:text-gray-400">
                         {question.time_spent?.toFixed(1)}秒
                       </div>
                     </div>
@@ -170,7 +170,7 @@ export default function QuizResultPage() {
           </button>
           <button
             onClick={() => router.push('/')}
-            className="w-full py-3 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors"
+            className="w-full py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
           >
             辞書に戻る
           </button>
@@ -178,7 +178,7 @@ export default function QuizResultPage() {
 
         {/* 進捗更新中の表示 */}
         {isUpdatingProgress && (
-          <div className="mt-4 text-center text-sm text-gray-500">
+          <div className="mt-4 text-center text-sm text-gray-500 dark:text-gray-400">
             進捗データを更新しています...
           </div>
         )}

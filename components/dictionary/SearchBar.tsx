@@ -53,7 +53,7 @@ export function SearchBar({ value, onChange, placeholder = '用語を検索...' 
     <div className="relative">
       <div className="relative flex items-center">
         {/* 検索アイコン */}
-        <div className="absolute left-3 text-gray-400">
+        <div className="absolute left-3 text-gray-400 dark:text-gray-500">
           🔍
         </div>
 
@@ -64,13 +64,13 @@ export function SearchBar({ value, onChange, placeholder = '用語を検索...' 
           value={localValue}
           onChange={(e) => setLocalValue(e.target.value)}
           placeholder={placeholder}
-          className="w-full pl-10 pr-20 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full pl-10 pr-20 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
         />
 
         {/* ショートカット表示 */}
         {!localValue && (
-          <div className="absolute right-3 flex items-center space-x-1 text-xs text-gray-400">
-            <kbd className="px-2 py-1 bg-gray-100 rounded border border-gray-300">
+          <div className="absolute right-3 flex items-center space-x-1 text-xs text-gray-400 dark:text-gray-500">
+            <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded border border-gray-300 dark:border-gray-600">
               ⌘K
             </kbd>
           </div>
@@ -80,7 +80,7 @@ export function SearchBar({ value, onChange, placeholder = '用語を検索...' 
         {localValue && (
           <button
             onClick={handleClear}
-            className="absolute right-3 p-1 text-gray-400 hover:text-gray-600"
+            className="absolute right-3 p-1 text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300"
             aria-label="クリア"
           >
             ✕
@@ -90,7 +90,7 @@ export function SearchBar({ value, onChange, placeholder = '用語を検索...' 
 
       {/* 検索結果数（オプション） */}
       {localValue && (
-        <div className="mt-2 text-sm text-gray-500">
+        <div className="mt-2 text-sm text-gray-500 dark:text-gray-400">
           検索中...
         </div>
       )}

@@ -46,8 +46,8 @@ export function TermList({ terms, progressMap, onSelectTerm }: TermListProps) {
     return (
       <div className="text-center py-12">
         <div className="text-6xl mb-4">🔍</div>
-        <p className="text-xl text-gray-600">用語が見つかりませんでした</p>
-        <p className="text-sm text-gray-500 mt-2">
+        <p className="text-xl text-gray-600 dark:text-gray-400">用語が見つかりませんでした</p>
+        <p className="text-sm text-gray-500 dark:text-gray-500 mt-2">
           検索条件を変更するか、フィルタを解除してください
         </p>
       </div>
@@ -57,7 +57,7 @@ export function TermList({ terms, progressMap, onSelectTerm }: TermListProps) {
   return (
     <div>
       {/* 結果数 */}
-      <div className="mb-4 text-sm text-gray-600">
+      <div className="mb-4 text-sm text-gray-600 dark:text-gray-400">
         {terms.length}件の用語が見つかりました
       </div>
 

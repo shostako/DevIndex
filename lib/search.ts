@@ -1,4 +1,4 @@
-import Fuse from 'fuse.js';
+import Fuse, { FuseResultMatch } from 'fuse.js';
 import type { Term } from '@/types/term';
 
 // ----------------
@@ -112,7 +112,7 @@ export interface MatchInfo {
 /**
  * Fuse.jsのマッチ情報を抽出
  */
-function extractMatches(fuseMatches: readonly any[]): MatchInfo[] {
+function extractMatches(fuseMatches: readonly FuseResultMatch[]): MatchInfo[] {
   return fuseMatches.map(match => ({
     key: match.key ?? '',
     value: match.value ?? '',

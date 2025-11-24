@@ -37,10 +37,10 @@ export default function ReviewCard({
           <div className="p-8">
             {/* ヘッダー: 進捗 */}
             <div className="mb-6 text-center">
-              <div className="text-sm text-gray-500 mb-2">
+              <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
                 復習 {currentIndex + 1} / {totalCount}
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
+              <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
                 <div
                   className="bg-blue-600 h-2 rounded-full transition-all"
                   style={{ width: `${((currentIndex + 1) / totalCount) * 100}%` }}
@@ -51,12 +51,12 @@ export default function ReviewCard({
             {/* 用語名 */}
             <div className="mb-8">
               <div className="text-center mb-4">
-                <div className="text-sm text-gray-600 mb-2">この用語を覚えていますか？</div>
-                <h2 className="text-4xl font-bold text-gray-900">
+                <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">この用語を覚えていますか？</div>
+                <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
                   {term.term}
                 </h2>
                 {term.reading && (
-                  <div className="text-xl text-gray-500 mt-2">
+                  <div className="text-xl text-gray-500 dark:text-gray-400 mt-2">
                     {term.reading}
                   </div>
                 )}
@@ -78,18 +78,18 @@ export default function ReviewCard({
           <div className="p-8">
             {/* 用語情報 */}
             <div className="mb-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">{term.term}</h3>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{term.term}</h3>
               {term.reading && (
-                <div className="text-lg text-gray-500 mb-4">{term.reading}</div>
+                <div className="text-lg text-gray-500 dark:text-gray-400 mb-4">{term.reading}</div>
               )}
-              <div className="p-4 bg-gray-50 rounded-lg mb-4">
-                <div className="text-gray-800">{term.short_desc}</div>
+              <div className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg mb-4">
+                <div className="text-gray-800 dark:text-gray-200">{term.short_desc}</div>
               </div>
               <div className="flex items-center gap-2 text-sm">
-                <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded">
+                <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded">
                   {term.category}
                 </span>
-                <span className="px-2 py-1 bg-gray-100 text-gray-800 rounded">
+                <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded">
                   {term.difficulty === 'beginner' && '初級'}
                   {term.difficulty === 'intermediate' && '中級'}
                   {term.difficulty === 'advanced' && '上級'}
@@ -99,7 +99,7 @@ export default function ReviewCard({
 
             {/* 記憶度評価 */}
             <div className="mb-4">
-              <div className="text-sm font-medium text-gray-700 mb-3 text-center">
+              <div className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3 text-center">
                 この用語をどのくらい覚えていましたか？
               </div>
               <div className="grid grid-cols-2 gap-2">
@@ -109,14 +109,14 @@ export default function ReviewCard({
                     <button
                       key={quality}
                       onClick={() => handleRate(q)}
-                      className={`p-3 border-2 rounded-lg hover:bg-gray-50 transition-colors ${
+                      className={`p-3 border-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${
                         q < 3
-                          ? 'border-red-300 hover:border-red-500'
-                          : 'border-green-300 hover:border-green-500'
+                          ? 'border-red-300 dark:border-red-600 hover:border-red-500'
+                          : 'border-green-300 dark:border-green-600 hover:border-green-500'
                       }`}
                     >
-                      <div className="font-bold text-lg">{quality}</div>
-                      <div className="text-xs text-gray-600">{label}</div>
+                      <div className="font-bold text-lg text-gray-900 dark:text-white">{quality}</div>
+                      <div className="text-xs text-gray-600 dark:text-gray-400">{label}</div>
                     </button>
                   );
                 })}
@@ -124,7 +124,7 @@ export default function ReviewCard({
             </div>
 
             {/* ヒント */}
-            <div className="text-xs text-gray-500 text-center">
+            <div className="text-xs text-gray-500 dark:text-gray-400 text-center">
               0-2: 忘れていた → すぐ復習 / 3-5: 覚えていた → 間隔を延ばす
             </div>
           </div>
@@ -155,9 +155,14 @@ export default function ReviewCard({
           position: absolute;
           width: 100%;
           backface-visibility: hidden;
-          background: white;
+          background: rgb(var(--background-rgb));
           border-radius: 12px;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        :global(.dark) .card-face {
+          background: rgb(31, 41, 55);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         .card-front {

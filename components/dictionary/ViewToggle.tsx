@@ -6,13 +6,13 @@ export function ViewToggle() {
   const { viewMode, setViewMode } = useUIStore();
 
   return (
-    <div className="flex items-center gap-1 bg-gray-100 rounded-md p-1">
+    <div className="flex items-center gap-1 bg-gray-100 dark:bg-gray-700 rounded-md p-1">
       <button
         onClick={() => setViewMode('card')}
         className={`px-3 py-1.5 rounded text-sm font-medium transition-colors ${
           viewMode === 'card'
-            ? 'bg-white text-gray-900 shadow-sm'
-            : 'text-gray-600 hover:text-gray-900'
+            ? 'bg-white dark:bg-gray-600 text-gray-900 dark:text-white shadow-sm'
+            : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
         }`}
         title="カード表示"
       >
@@ -34,8 +34,8 @@ export function ViewToggle() {
         onClick={() => setViewMode('list')}
         className={`px-3 py-1.5 rounded text-sm font-medium transition-colors ${
           viewMode === 'list'
-            ? 'bg-white text-gray-900 shadow-sm'
-            : 'text-gray-600 hover:text-gray-900'
+            ? 'bg-white dark:bg-gray-600 text-gray-900 dark:text-white shadow-sm'
+            : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
         }`}
         title="リスト表示"
       >

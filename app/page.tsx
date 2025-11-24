@@ -67,7 +67,7 @@ export default function Home() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="text-6xl mb-4">⏳</div>
-          <p className="text-xl text-gray-600">読み込み中...</p>
+          <p className="text-xl text-gray-600 dark:text-gray-400">読み込み中...</p>
         </div>
       </div>
     );
@@ -79,7 +79,7 @@ export default function Home() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="text-6xl mb-4">⚠️</div>
-          <p className="text-xl text-red-600">{initError}</p>
+          <p className="text-xl text-red-600 dark:text-red-400">{initError}</p>
           <button
             onClick={() => window.location.reload()}
             className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
@@ -92,7 +92,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* ヘッダー */}
       <Header />
 
@@ -132,7 +132,7 @@ export default function Home() {
             {isLoading ? (
               <div className="text-center py-12">
                 <div className="text-4xl mb-4">⏳</div>
-                <p className="text-gray-600">検索中...</p>
+                <p className="text-gray-600 dark:text-gray-400">検索中...</p>
               </div>
             ) : (
               <TermList

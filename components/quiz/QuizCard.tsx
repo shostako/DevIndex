@@ -53,10 +53,10 @@ export default function QuizCard({
           <div className="p-8">
             {/* ヘッダー: 進捗 */}
             <div className="mb-6 text-center">
-              <div className="text-sm text-gray-500 mb-2">
+              <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
                 問題 {questionNumber} / {totalQuestions}
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
+              <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
                 <div
                   className="bg-blue-600 h-2 rounded-full transition-all"
                   style={{ width: `${(questionNumber / totalQuestions) * 100}%` }}
@@ -66,7 +66,7 @@ export default function QuizCard({
 
             {/* 問題文 */}
             <div className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 text-center">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white text-center">
                 {question.question_text}
               </h2>
             </div>
@@ -80,15 +80,15 @@ export default function QuizCard({
                   disabled={selectedIndex !== null}
                   className={`w-full p-4 text-left border-2 rounded-lg transition-all ${
                     selectedIndex === index
-                      ? 'border-blue-600 bg-blue-50'
-                      : 'border-gray-300 hover:border-blue-400 hover:bg-gray-50'
+                      ? 'border-blue-600 bg-blue-50 dark:bg-blue-900/30'
+                      : 'border-gray-300 dark:border-gray-600 hover:border-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700'
                   } ${selectedIndex !== null ? 'cursor-not-allowed opacity-60' : 'cursor-pointer'}`}
                 >
                   <div className="flex items-center">
-                    <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-gray-100 rounded-full text-sm font-medium mr-3">
+                    <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-full text-sm font-medium mr-3 text-gray-900 dark:text-white">
                       {String.fromCharCode(65 + index)}
                     </span>
-                    <span className="text-gray-900">{choice.text}</span>
+                    <span className="text-gray-900 dark:text-white">{choice.text}</span>
                   </div>
                 </button>
               ))}
@@ -102,12 +102,12 @@ export default function QuizCard({
             {/* 結果表示 */}
             <div className="mb-6 text-center">
               {isCorrect ? (
-                <div className="text-green-600">
+                <div className="text-green-600 dark:text-green-400">
                   <div className="text-6xl mb-2">✓</div>
                   <div className="text-2xl font-bold">正解！</div>
                 </div>
               ) : (
-                <div className="text-red-600">
+                <div className="text-red-600 dark:text-red-400">
                   <div className="text-6xl mb-2">✗</div>
                   <div className="text-2xl font-bold">不正解</div>
                 </div>
@@ -116,13 +116,13 @@ export default function QuizCard({
 
             {/* 正解の選択肢 */}
             <div className="mb-6">
-              <div className="text-sm text-gray-600 mb-2">正解</div>
-              <div className="p-4 bg-green-50 border-2 border-green-500 rounded-lg">
+              <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">正解</div>
+              <div className="p-4 bg-green-50 dark:bg-green-900/30 border-2 border-green-500 rounded-lg">
                 <div className="flex items-center">
                   <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-green-500 text-white rounded-full text-sm font-medium mr-3">
                     {String.fromCharCode(65 + question.correct_index)}
                   </span>
-                  <span className="text-gray-900 font-medium">
+                  <span className="text-gray-900 dark:text-white font-medium">
                     {question.choices[question.correct_index].text}
                   </span>
                 </div>
@@ -131,10 +131,10 @@ export default function QuizCard({
 
             {/* 解説 */}
             <div className="mb-6">
-              <div className="text-sm text-gray-600 mb-2">解説</div>
-              <div className="p-4 bg-gray-50 rounded-lg">
-                <div className="font-bold text-gray-900 mb-2">{term.term}</div>
-                <div className="text-gray-700 text-sm">{term.short_desc}</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">解説</div>
+              <div className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                <div className="font-bold text-gray-900 dark:text-white mb-2">{term.term}</div>
+                <div className="text-gray-700 dark:text-gray-300 text-sm">{term.short_desc}</div>
               </div>
             </div>
 
@@ -173,9 +173,14 @@ export default function QuizCard({
           position: absolute;
           width: 100%;
           backface-visibility: hidden;
-          background: white;
+          background: rgb(var(--background-rgb));
           border-radius: 12px;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        :global(.dark) .card-face {
+          background: rgb(31, 41, 55);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         .card-front {

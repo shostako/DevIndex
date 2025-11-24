@@ -57,10 +57,10 @@ export default function SRSReviewPage() {
   // ローディング中
   if (reviewList.length === 0) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
         <div className="text-center">
-          <div className="text-2xl font-bold text-gray-900 mb-2">復習を準備中...</div>
-          <div className="text-gray-600">しばらくお待ちください</div>
+          <div className="text-2xl font-bold text-gray-900 dark:text-white mb-2">復習を準備中...</div>
+          <div className="text-gray-600 dark:text-gray-400">しばらくお待ちください</div>
         </div>
       </div>
     );
@@ -71,8 +71,8 @@ export default function SRSReviewPage() {
 
   if (!currentTerm) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center text-red-600">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
+        <div className="text-center text-red-600 dark:text-red-400">
           <div className="text-2xl font-bold mb-2">エラー</div>
           <div>用語データが見つかりません</div>
         </div>
@@ -81,12 +81,12 @@ export default function SRSReviewPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8 px-4">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8 px-4">
       <div className="max-w-4xl mx-auto">
         {/* ヘッダー */}
         <div className="mb-6 text-center">
-          <h1 className="text-2xl font-bold text-gray-900">SRS復習モード</h1>
-          <p className="text-gray-600 mt-2">
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">SRS復習モード</h1>
+          <p className="text-gray-600 dark:text-gray-400 mt-2">
             記憶度を正直に評価して、効率的に復習しよう
           </p>
         </div>
@@ -107,7 +107,7 @@ export default function SRSReviewPage() {
                 router.push('/srs');
               }
             }}
-            className="text-gray-600 hover:text-gray-900 underline text-sm"
+            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white underline text-sm"
           >
             復習を中断
           </button>

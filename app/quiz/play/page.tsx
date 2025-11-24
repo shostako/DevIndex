@@ -1,15 +1,15 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useTermStore } from '@/lib/store';
 import { useProgressStore } from '@/lib/store';
 import { generateQuizQuestions, createQuizSession, answerQuestion } from '@/lib/quiz';
 import QuizCard from '@/components/quiz/QuizCard';
-import type { QuizQuestion, QuizSession } from '@/types/quiz';
+import type { QuizSession } from '@/types/quiz';
 import type { GenerateQuizOptions } from '@/lib/quiz';
 
-export default function QuizPlayPage() {
+function QuizPlayContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { terms } = useTermStore();
@@ -91,10 +91,10 @@ export default function QuizPlayPage() {
   // ローディング中
   if (!session) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
         <div className="text-center">
-          <div className="text-2xl font-bold text-gray-900 mb-2">クイズを準備中...</div>
-          <div className="text-gray-600">しばらくお待ちください</div>
+          <div className="text-2xl font-bold text-gray-900 dark:text-white mb-2">クイズを準備中...</div>
+          <div className="text-gray-600 dark:text-gray-400">しばらくお待ちください</div>
         </div>
       </div>
     );
@@ -105,8 +105,8 @@ export default function QuizPlayPage() {
 
   if (!currentTerm) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center text-red-600">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
+        <div className="text-center text-red-600 dark:text-red-400">
           <div className="text-2xl font-bold mb-2">エラー</div>
           <div>用語データが見つかりません</div>
         </div>
@@ -115,12 +115,12 @@ export default function QuizPlayPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8 px-4">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8 px-4">
       <div className="max-w-4xl mx-auto">
         {/* ヘッダー */}
         <div className="mb-6 text-center">
-          <h1 className="text-2xl font-bold text-gray-900">クイズモード</h1>
-          <p className="text-gray-600 mt-2">
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">クイズモード</h1>
+          <p className="text-gray-600 dark:text-gray-400 mt-2">
             {session.mode === 'random' && '全用語からランダム出題'}
             {session.mode === 'category' && `カテゴリ: ${session.category}`}
             {session.mode === 'weakness' && '苦手な用語を優先'}
@@ -145,12 +145,33 @@ export default function QuizPlayPage() {
                 router.push('/quiz');
               }
             }}
-            className="text-gray-600 hover:text-gray-900 underline text-sm"
+            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white underline text-sm"
           >
             クイズを中断
           </button>
         </div>
       </div>
     </div>
+  );
+}
+
+// ローディングフォールバック
+function QuizPlayLoading() {
+  return (
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
+      <div className="text-center">
+        <div className="text-2xl font-bold text-gray-900 dark:text-white mb-2">読み込み中...</div>
+        <div className="text-gray-600 dark:text-gray-400">しばらくお待ちください</div>
+      </div>
+    </div>
+  );
+}
+
+// メインページコンポーネント（Suspense境界でラップ）
+export default function QuizPlayPage() {
+  return (
+    <Suspense fallback={<QuizPlayLoading />}>
+      <QuizPlayContent />
+    </Suspense>
   );
 }

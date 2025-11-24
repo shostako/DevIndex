@@ -28,7 +28,7 @@ export function Sidebar({ categories, selectedCategory, onCategoryChange }: Side
       <aside
         className={`
           fixed lg:static inset-y-0 left-0 z-40
-          w-64 bg-white border-r border-gray-200
+          w-64 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700
           transform transition-transform duration-200 ease-in-out
           ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
         `}
@@ -36,7 +36,7 @@ export function Sidebar({ categories, selectedCategory, onCategoryChange }: Side
         <div className="h-full overflow-y-auto p-4 pt-20 lg:pt-4">
           {/* カテゴリーフィルタ */}
           <div className="mb-6">
-            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">
+            <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">
               カテゴリー
             </h3>
             <div className="space-y-1">
@@ -45,8 +45,8 @@ export function Sidebar({ categories, selectedCategory, onCategoryChange }: Side
                 onClick={() => onCategoryChange(null)}
                 className={`w-full text-left px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   selectedCategory === null
-                    ? 'bg-gray-100 text-gray-900'
-                    : 'text-gray-700 hover:bg-gray-50'
+                    ? 'bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white'
+                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
                 }`}
               >
                 すべて
@@ -59,8 +59,8 @@ export function Sidebar({ categories, selectedCategory, onCategoryChange }: Side
                   onClick={() => onCategoryChange(category.name)}
                   className={`w-full text-left px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     selectedCategory === category.name
-                      ? 'bg-gray-100 text-gray-900'
-                      : 'text-gray-700 hover:bg-gray-50'
+                      ? 'bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white'
+                      : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
                   }`}
                 >
                   <span
@@ -75,21 +75,21 @@ export function Sidebar({ categories, selectedCategory, onCategoryChange }: Side
 
           {/* 統計情報 */}
           <div className="mb-6">
-            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">
+            <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">
               統計
             </h3>
             <div className="space-y-2 text-sm">
-              <div className="flex justify-between text-gray-600">
+              <div className="flex justify-between text-gray-600 dark:text-gray-400">
                 <span>全用語</span>
-                <span className="font-semibold">{terms.length}</span>
+                <span className="font-semibold text-gray-900 dark:text-white">{terms.length}</span>
               </div>
-              <div className="flex justify-between text-gray-600">
+              <div className="flex justify-between text-gray-600 dark:text-gray-400">
                 <span>習得済み</span>
-                <span className="font-semibold">0</span>
+                <span className="font-semibold text-gray-900 dark:text-white">0</span>
               </div>
-              <div className="flex justify-between text-gray-600">
+              <div className="flex justify-between text-gray-600 dark:text-gray-400">
                 <span>今日の復習</span>
-                <span className="font-semibold text-blue-600">0</span>
+                <span className="font-semibold text-blue-600 dark:text-blue-400">0</span>
               </div>
             </div>
           </div>
