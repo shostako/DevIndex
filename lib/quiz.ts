@@ -96,7 +96,11 @@ function generateSingleQuestion(
   allTerms: Term[]
 ): QuizQuestion {
   // 問題タイプをランダム選択
-  const questionTypes: QuestionType[] = ['term-to-desc', 'desc-to-term', 'reading-to-term'];
+  // アルファベット主体の用語（CSS、HTTP等）は reading-to-term を除外
+  const isAlphabetTerm = /^[A-Za-z0-9\-_.\/]+$/.test(correctTerm.term);
+  const questionTypes: QuestionType[] = isAlphabetTerm
+    ? ['term-to-desc', 'desc-to-term']
+    : ['term-to-desc', 'desc-to-term', 'reading-to-term'];
   const questionType = questionTypes[Math.floor(Math.random() * questionTypes.length)];
 
   // 問題文を生成
