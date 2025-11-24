@@ -13,13 +13,32 @@ export interface QuizSession {
   };
 }
 
+// クイズ問題タイプ
+export type QuestionType =
+  | 'term-to-desc'      // 用語名 → 説明を選択
+  | 'desc-to-term'      // 説明 → 用語名を選択
+  | 'reading-to-term';  // 読み仮名 → 用語名を選択
+
+// 選択肢
+export interface QuizChoice {
+  text: string;         // 選択肢のテキスト
+  term_id: string;      // 対応する用語ID
+}
+
 // クイズ問題
 export interface QuizQuestion {
-  term_id: string;
-  answered_at: Date;
-  is_correct: boolean;
-  time_spent: number;        // 秒
-  quality: 0 | 1 | 2 | 3 | 4 | 5;  // 記憶度（SRS用）
+  term_id: string;                // 正解の用語ID
+  question_type: QuestionType;    // 問題タイプ
+  question_text: string;          // 問題文
+  choices: QuizChoice[];          // 選択肢（4つ）
+  correct_index: number;          // 正解のインデックス (0-3)
+
+  // 回答後に設定される
+  user_answer_index?: number;     // ユーザーの回答インデックス
+  is_correct?: boolean;           // 正誤
+  answered_at?: Date;             // 回答時刻
+  time_spent?: number;            // 回答にかかった時間（秒）
+  quality?: 0 | 1 | 2 | 3 | 4 | 5;  // 記憶度（SRS用）
 }
 
 // 記憶度の評価基準
