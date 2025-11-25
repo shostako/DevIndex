@@ -15,8 +15,11 @@ interface TermsData {
 // 初期化フラグ（競合状態を防ぐ）
 let isInitializing = false;
 
+const TERMS_VERSION_KEY = 'devindex_terms_version';
+
 /**
  * terms.jsonからデータを読み込み、IndexedDBに投入
+ * バージョンが変わった場合のみ更新する
  */
 export async function initializeDatabase(): Promise<void> {
   // 既に初期化中の場合はスキップ（競合状態を防ぐ）
@@ -36,10 +39,25 @@ export async function initializeDatabase(): Promise<void> {
 
     const data: TermsData = await response.json();
 
-    // IndexedDBに一括投入（bulkPutで上書き可能にする）
-    await db.terms.bulkPut(data.terms);
+    // バージョンチェック
+    const storedVersion = localStorage.getItem(TERMS_VERSION_KEY);
 
-    console.log(`Database initialized: ${data.terms.length} terms loaded`);
+    if (storedVersion === data.version) {
+      // バージョンが同じなら既存データを使用
+      const existingCount = await db.terms.count();
+      if (existingCount > 0) {
+        console.log(`Using cached data (version: ${data.version}, ${existingCount} terms)`);
+        return;
+      }
+    }
+
+    // バージョンが違う or データがない → クリア＆再投入
+    console.log(`Updating data: ${storedVersion || 'none'} → ${data.version}`);
+    await db.terms.clear();
+    await db.terms.bulkPut(data.terms);
+    localStorage.setItem(TERMS_VERSION_KEY, data.version);
+
+    console.log(`Database updated: ${data.terms.length} terms loaded (version: ${data.version})`);
     console.log(`Categories: ${data.categories.map(c => c.name).join(', ')}`);
   } catch (error) {
     console.error('Database initialization failed:', error);
