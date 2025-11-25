@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2025-11-24T08:32:17.942Z",
+  "updated_at": "2025-11-25T04:30:34.497Z",
   "terms": [
     {
       "id": "94c312e8-dfd8-4919-9757-858605b12e15",
@@ -17,8 +17,12 @@
         "アーキテクチャ"
       ],
       "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「RESTful」を自称するAPIの9割は、RESTの制約を何一つ守っていない。でも誰も気にしない",
-      "term_en": "REST API"
+      "term_en": "REST API",
+      "sarcastic_notes": [
+        "「RESTful」を自称するAPIの9割は単なるHTTP API。でも誰も訂正しない。面倒だから",
+        "GET/POST/PUT/DELETEの4つしかないのに、設計で3ヶ月揉める。人類には早すぎた",
+        "「ステートレス」なのに毎晩呼び出される。休めないのはAPIも人間も同じ"
+      ]
     },
     {
       "id": "0b543d1a-ae47-4e66-a0a1-9cae333abdd9",
@@ -34,8 +38,12 @@
         "Web"
       ],
       "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「人間にも読みやすい」と言われるが、末尾のカンマ1つでパニックを起こすデリケートな性格",
-      "term_en": "JSON"
+      "term_en": "JSON",
+      "sarcastic_notes": [
+        "「人間にも読みやすい」と言いながら、末尾カンマ1つでパースエラー。繊細すぎる",
+        "XMLより簡潔と言われて20年。今度はYAMLに同じこと言われてる",
+        "裸のデータをそのまま交換。ラッピングなしの直球勝負"
+      ]
     },
     {
       "id": "1b0a2ebc-5456-4e23-9f67-458536992a91",
@@ -51,8 +59,12 @@
         "クエリ言語"
       ],
       "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「SELECT * FROM」と打った瞬間に本番DBを吹き飛ばす悪夢を見たことがあるだろ？",
-      "term_en": "SQL"
+      "term_en": "SQL",
+      "sarcastic_notes": [
+        "本番DBで`UPDATE`を`WHERE`なしで実行した瞬間の静寂。キャリアが走馬灯",
+        "「ちょっと確認するだけ」の`SELECT *`が本番を落とす。毎年誰かがやる",
+        "「INSERT INTO」というコマンド名に反応した奴、正直になれ"
+      ]
     },
     {
       "id": "6ba816c1-baea-4b14-b332-1feb4a076fe8",
@@ -67,8 +79,12 @@
         "スケーラビリティ"
       ],
       "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「SQLより速い！」と導入して、結局JOINできなくて後悔するパターンの定番",
-      "term_en": "NoSQL"
+      "term_en": "NoSQL",
+      "sarcastic_notes": [
+        "「SQLより速い！」と導入して、結局JOINできなくて地獄を見るパターン",
+        "スキーマレスという名の「後で困る自由」を手に入れた",
+        "形式に縛られない自由な関係。責任も曖昧"
+      ]
     },
     {
       "id": "c85beca0-e63f-4884-8b29-fb9e6e79571b",
@@ -85,8 +101,12 @@
         "型安全"
       ],
       "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「型安全！」と叫びながら、エラーが出たら速攻で `any` を使って黙らせる",
-      "term_en": "TypeScript"
+      "term_en": "TypeScript",
+      "sarcastic_notes": [
+        "「型安全！」と導入して、`any`の使用率を競うゲームが始まる",
+        "型定義に3時間、実装30分。何を作ってるか分からなくなる瞬間",
+        "厳格な型チェックという名の束縛プレイ。`any`は安全語"
+      ]
     },
     {
       "id": "112ab3b7-f153-4b15-af1a-e4705c8394a3",
@@ -103,8 +123,12 @@
         "Promise"
       ],
       "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "async/awaitで「簡単！」と思ったら、Promise地獄の deeper hell へようこそ",
-      "term_en": "Asynchronous Processing"
+      "term_en": "Asynchronous Processing",
+      "sarcastic_notes": [
+        "`async/await`で「簡単！」と思った3秒後に`Promise.all`地獄へようこそ",
+        "コールバック地獄を脱出して、await地獄に引っ越しただけ",
+        "「待たずに次へ進む」という、現代人の恋愛観そのもの"
+      ]
     },
     {
       "id": "2727f099-5221-44e7-81ad-fda170d21b3b",
@@ -120,8 +144,12 @@
         "ツール"
       ],
       "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "コンフリクトを解決できずに「俺のコード消えた！」とパニックになる儀式",
-      "term_en": "Git"
+      "term_en": "Git",
+      "sarcastic_notes": [
+        "`git push --force`は技術的には正しい。社会的には死",
+        "コンフリクト解決できずに「全部俺のでいいか？」と聞く勇気",
+        "push、pull、mergeの三連コンボ。深夜の開発も夜の営みも変わらない"
+      ]
     },
     {
       "id": "e6173089-508f-4723-b9a7-151cfb445872",
@@ -138,8 +166,12 @@
         "インフラ"
       ],
       "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「環境の一貫性！」と導入したら、Dockerfileのデバッグで3時間溶けた",
-      "term_en": "Docker"
+      "term_en": "Docker",
+      "sarcastic_notes": [
+        "「環境差異をなくす」と言いながら、Dockerfile自体が環境依存",
+        "「コンテナは軽量」と言いつつ、node_modulesで2GB超えてる",
+        "「ドッキング」という単語に反応した奴、正直に手を挙げろ"
+      ]
     },
     {
       "id": "6e9d5d95-f8b9-429c-9f32-0b6e883bf38e",
@@ -154,8 +186,12 @@
         "アーキテクチャ"
       ],
       "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「綺麗に分離！」と言いつつ、気づいたらControllerが肥大化してる定番パターン",
-      "term_en": "MVC"
+      "term_en": "MVC",
+      "sarcastic_notes": [
+        "「綺麗に分離！」と言いつつ、気づいたらControllerが1万行",
+        "ModelとViewの間をControllerが取り持つ。三角関係の調停役",
+        "Model、View、Controllerの三角関係。誰が誰を見てるか複雑すぎる"
+      ]
     },
     {
       "id": "f7354496-866a-4f6c-8924-b5cac5a47cec",
@@ -170,8 +206,12 @@
         "スケーラビリティ"
       ],
       "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「スケーラブル！」と分割したら、デバッグで何個のログを見ればいいんだ状態",
-      "term_en": "Microservices"
+      "term_en": "Microservices",
+      "sarcastic_notes": [
+        "モノリスの問題を、分散システムの問題に置き換える魔法",
+        "「疎結合！」と叫びながら、結局全部同時にデプロイしてる",
+        "小さく分けて独立させる。関係のマンネリ化防止策として有効"
+      ]
     },
     {
       "id": "9fabd89f-25ee-4d43-bdb5-f8e225ff4ee5",
@@ -186,8 +226,12 @@
         "インターフェース"
       ],
       "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「インターフェース」という名の、ドキュメントが古くて使い物にならないアレ",
-      "term_en": "API"
+      "term_en": "API",
+      "sarcastic_notes": [
+        "「インターフェース」という名の、ドキュメントが3年前で止まってるアレ",
+        "バージョン管理という概念を導入した瞬間、v1が永遠に残る呪い",
+        "Application Programming Interface。略すと何かいやらしい響き"
+      ]
     },
     {
       "id": "89cef293-0453-432e-bc3f-89a514e727e7",
@@ -203,8 +247,12 @@
         "スタイル"
       ],
       "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "中央揃え1つするのに Stack Overflow を3回見る魔法の言語",
-      "term_en": "CSS"
+      "term_en": "CSS",
+      "sarcastic_notes": [
+        "`!important`を使った瞬間、負けを認めたことになる",
+        "「カスケード」という名の、なぜこのスタイルが当たってるか誰も分からない状態",
+        "Cascading Style Sheets。滝のように上から降り注ぐ支配"
+      ]
     },
     {
       "id": "cb9d742e-506a-4e1b-beb4-73c348c1858c",
@@ -221,8 +269,12 @@
         "NoSQL"
       ],
       "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「ブラウザでDB！」と喜んだら、非同期地獄で心が折れるやつ",
-      "term_en": "IndexedDB"
+      "term_en": "IndexedDB",
+      "sarcastic_notes": [
+        "「ブラウザ内DB！」と喜んで使い始めて、APIの複雑さに絶望する",
+        "非同期地獄とトランザクション地獄を同時に味わえるお得なAPI",
+        "ブラウザ内でこっそりデータを溜め込む。秘密の関係"
+      ]
     },
     {
       "id": "a43ef3cb-9df3-4dc0-bba5-e3c8381abfc1",
@@ -239,8 +291,12 @@
         "ライブラリ"
       ],
       "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「再利用性！」と言いつつ、useEffectの依存配列で3日悩むライブラリ",
-      "term_en": "React"
+      "term_en": "React",
+      "sarcastic_notes": [
+        "「宣言的UI！」と言いながら、useEffectの依存配列で3時間溶かす",
+        "「学習曲線が緩やか」という嘘を信じた過去の自分を殴りたい",
+        "状態が変わるたびに再レンダリング。反応しすぎて疲れる"
+      ]
     },
     {
       "id": "07b9ef03-aed6-439b-a22d-5ea954bf5383",
@@ -255,8 +311,12 @@
         "ビルド"
       ],
       "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "設定ファイルが肥大化して、誰もメンテできなくなった遺産",
-      "term_en": "Webpack"
+      "term_en": "Webpack",
+      "sarcastic_notes": [
+        "設定ファイルの設定ファイルが必要になる闇のバンドラー",
+        "エラーメッセージを読んでも何が悪いか分からない伝統芸",
+        "全部まとめて一つに束ねる。複数プレイには向かない"
+      ]
     },
     {
       "id": "df3591ca-72f6-41f6-bc71-2aa569e7f44e",
@@ -271,8 +331,12 @@
         "自動化"
       ],
       "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「自動化！」と導入したら、パイプラインのデバッグで手動より時間かかってる",
-      "term_en": "CI/CD"
+      "term_en": "CI/CD",
+      "sarcastic_notes": [
+        "「自動化で楽になる」はずが、パイプラインのデバッグで徹夜",
+        "緑のチェックマークが出るまでcommitを積む羞恥プレイ",
+        "継続的に統合して継続的にデプロイ。休む暇なし"
+      ]
     },
     {
       "id": "e261a4d4-560b-4a9a-97f0-13ec7682eb32",
@@ -287,8 +351,12 @@
         "アーキテクチャ"
       ],
       "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「ドメイン中心！」と叫んだら、誰もドメインを理解していなかった",
-      "term_en": "DDD"
+      "term_en": "DDD",
+      "sarcastic_notes": [
+        "「ドメイン駆動！」と叫んで、境界づけられたコンテキストで3ヶ月迷子",
+        "ユビキタス言語を定義する会議が、最も非ユビキタスな時間",
+        "ドメインに駆動される設計。主導権は向こうにある"
+      ]
     },
     {
       "id": "00e1287f-5934-427b-b34d-fb7d80744325",
@@ -303,8 +371,12 @@
         "認証"
       ],
       "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「このアプリに全権限を与えますか？」→ 99%が何も読まずに承認する儀式",
-      "term_en": "OAuth"
+      "term_en": "OAuth",
+      "sarcastic_notes": [
+        "認証と認可の違いを説明できる人、実は少ない",
+        "「Googleでログイン」ボタンの裏で何が起きてるか誰も知らない",
+        "他人の認証情報を借りてアクセス。間接的な関係"
+      ]
     },
     {
       "id": "81b5fd7d-9b57-426f-80bd-b36478264370",
@@ -320,8 +392,12 @@
         "オフライン"
       ],
       "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「ネイティブ並み！」と言うが、結局AppStoreに出せないやつ",
-      "term_en": "PWA"
+      "term_en": "PWA",
+      "sarcastic_notes": [
+        "「ネイティブアプリみたい！」という、みたいで終わる技術",
+        "Service Workerが正しく動いてるか確認する方法、誰も知らない",
+        "Progressive Web App。段階的に深い関係になっていく"
+      ]
     },
     {
       "id": "3ef40e50-048b-4a4d-877e-905e9bbe6881",
@@ -338,347 +414,12 @@
         "UI"
       ],
       "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "media queryの閾値が10個になって、誰もメンテできなくなったやつ",
-      "term_en": "Responsive Design"
-    },
-    {
-      "id": "d3603d17-7764-44c0-9cf6-7d3a9dc1a280",
-      "term": "REST API",
-      "reading": "レストエーピーアイ",
-      "category": "Web",
-      "difficulty": "beginner",
-      "short_desc": "HTTPプロトコルを使用したアーキテクチャスタイル",
-      "full_desc": "## REST APIとは\n\nREpresentational State Transfer（REST）は、Webサービスを設計するためのアーキテクチャスタイルです。\n\n### 特徴\n- **ステートレス**: 各リクエストは独立して処理される\n- **リソース指向**: URLでリソースを表現\n- **HTTPメソッド**: GET、POST、PUT、DELETEを使用",
-      "code_example": "fetch('/api/users')\n  .then(res => res.json())\n  .then(data => console.log(data))",
-      "tags": [
-        "API",
-        "HTTP",
-        "アーキテクチャ"
-      ],
-      "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「RESTful」を自称するAPIの9割は、RESTの制約を何一つ守っていない。でも誰も気にしない",
-      "term_en": "REST API"
-    },
-    {
-      "id": "b74588a3-f72a-4013-a922-b050883c9c72",
-      "term": "JSON",
-      "reading": "ジェイソン",
-      "category": "Web",
-      "difficulty": "beginner",
-      "short_desc": "JavaScript Object Notationの略。データ交換フォーマット",
-      "full_desc": "## JSONとは\n\nJSONは軽量なデータ交換フォーマットで、人間が読み書きしやすく、機械が解析・生成しやすい形式です。",
-      "code_example": "{\n  \"name\": \"太郎\",\n  \"age\": 25,\n  \"skills\": [\"JavaScript\", \"TypeScript\"]\n}",
-      "tags": [
-        "データ形式",
-        "Web"
-      ],
-      "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「人間にも読みやすい」と言われるが、末尾のカンマ1つでパニックを起こすデリケートな性格",
-      "term_en": "JSON"
-    },
-    {
-      "id": "7c2dbdad-f06f-496d-8104-10e082f38219",
-      "term": "SQL",
-      "reading": "エスキューエル",
-      "category": "Database",
-      "difficulty": "beginner",
-      "short_desc": "リレーショナルデータベースを操作するための言語",
-      "full_desc": "## SQLとは\n\nStructured Query Language（SQL）は、リレーショナルデータベース管理システム（RDBMS）でデータを操作するための標準言語です。",
-      "code_example": "SELECT * FROM users\nWHERE age > 20\nORDER BY created_at DESC;",
-      "tags": [
-        "データベース",
-        "クエリ言語"
-      ],
-      "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「SELECT * FROM」と打った瞬間に本番DBを吹き飛ばす悪夢を見たことがあるだろ？",
-      "term_en": "SQL"
-    },
-    {
-      "id": "b8dc4b54-20e1-411b-9582-71fe2c9537bb",
-      "term": "NoSQL",
-      "reading": "ノーエスキューエル",
-      "category": "Database",
-      "difficulty": "intermediate",
-      "short_desc": "非リレーショナルデータベースの総称",
-      "full_desc": "## NoSQLとは\n\nNoSQLは、従来のリレーショナルデータベースとは異なるアプローチを取るデータベースシステムの総称です。\n\n### 種類\n- **ドキュメント型**: MongoDB\n- **キーバリュー型**: Redis\n- **カラム型**: Cassandra\n- **グラフ型**: Neo4j",
-      "tags": [
-        "データベース",
-        "スケーラビリティ"
-      ],
-      "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「SQLより速い！」と導入して、結局JOINできなくて後悔するパターンの定番",
-      "term_en": "NoSQL"
-    },
-    {
-      "id": "2e564c03-8b12-46cf-97de-e44b7ac10b8d",
-      "term": "TypeScript",
-      "reading": "タイプスクリプト",
-      "category": "プログラミング言語",
-      "difficulty": "intermediate",
-      "short_desc": "JavaScriptに型システムを追加したプログラミング言語",
-      "full_desc": "## TypeScriptとは\n\nTypeScriptは、Microsoftが開発したJavaScriptのスーパーセットで、静的型付けを追加したプログラミング言語です。",
-      "code_example": "interface User {\n  id: number;\n  name: string;\n}\n\nfunction greet(user: User): string {\n  return `Hello, ${user.name}!`;\n}",
-      "tags": [
-        "プログラミング言語",
-        "JavaScript",
-        "型安全"
-      ],
-      "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「型安全！」と叫びながら、エラーが出たら速攻で `any` を使って黙らせる",
-      "term_en": "TypeScript"
-    },
-    {
-      "id": "4c8174c0-ec4e-42ae-a237-1d68b09f236e",
-      "term": "非同期処理",
-      "reading": "ひどうきしょり",
-      "category": "プログラミング言語",
-      "difficulty": "intermediate",
-      "short_desc": "処理の完了を待たずに次の処理を実行する仕組み",
-      "full_desc": "## 非同期処理とは\n\n非同期処理は、時間のかかる処理（ネットワーク通信、ファイル読み込み等）を待たずに、他の処理を続行できる仕組みです。\n\n### JavaScriptでの実装\n- **Promise**: 非同期処理の結果を表現\n- **async/await**: Promiseをより簡潔に記述",
-      "code_example": "async function fetchData() {\n  const response = await fetch('/api/data');\n  const data = await response.json();\n  return data;\n}",
-      "tags": [
-        "プログラミング",
-        "JavaScript",
-        "Promise"
-      ],
-      "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "async/awaitで「簡単！」と思ったら、Promise地獄の deeper hell へようこそ",
-      "term_en": "Asynchronous Processing"
-    },
-    {
-      "id": "4473606d-e265-4b93-b070-116eea5764c5",
-      "term": "Git",
-      "reading": "ギット",
-      "category": "ツール",
-      "difficulty": "beginner",
-      "short_desc": "分散型バージョン管理システム",
-      "full_desc": "## Gitとは\n\nGitは、ソースコードのバージョン管理を行うための分散型バージョン管理システムです。\n\n### 主要コマンド\n- `git clone`: リポジトリを複製\n- `git commit`: 変更を記録\n- `git push`: リモートに送信\n- `git pull`: リモートから取得",
-      "code_example": "git clone https://github.com/user/repo.git\ncd repo\ngit add .\ngit commit -m \"Add new feature\"\ngit push origin main",
-      "tags": [
-        "バージョン管理",
-        "ツール"
-      ],
-      "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "コンフリクトを解決できずに「俺のコード消えた！」とパニックになる儀式",
-      "term_en": "Git"
-    },
-    {
-      "id": "6260d939-c73b-441d-aad0-3fffb362516b",
-      "term": "Docker",
-      "reading": "ドッカー",
-      "category": "ツール",
-      "difficulty": "intermediate",
-      "short_desc": "コンテナ型の仮想化プラットフォーム",
-      "full_desc": "## Dockerとは\n\nDockerは、アプリケーションとその依存関係をコンテナとしてパッケージ化し、どの環境でも同じように実行できるようにするツールです。\n\n### メリット\n- 環境の一貫性\n- 軽量・高速\n- スケーラビリティ",
-      "code_example": "# Dockerfile\nFROM node:18\nWORKDIR /app\nCOPY package*.json ./\nRUN npm install\nCOPY . .\nCMD [\"npm\", \"start\"]",
-      "tags": [
-        "コンテナ",
-        "DevOps",
-        "インフラ"
-      ],
-      "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「環境の一貫性！」と導入したら、Dockerfileのデバッグで3時間溶けた",
-      "term_en": "Docker"
-    },
-    {
-      "id": "3f189331-ecfa-4317-a638-0e016e835e38",
-      "term": "MVC",
-      "reading": "エムブイシー",
-      "category": "アーキテクチャ",
-      "difficulty": "intermediate",
-      "short_desc": "Model-View-Controllerの略。アプリケーション設計パターン",
-      "full_desc": "## MVCとは\n\nMVCは、アプリケーションを3つの役割に分離する設計パターンです。\n\n- **Model**: データとビジネスロジック\n- **View**: 表示（UI）\n- **Controller**: ModelとViewの橋渡し",
-      "tags": [
-        "デザインパターン",
-        "アーキテクチャ"
-      ],
-      "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「綺麗に分離！」と言いつつ、気づいたらControllerが肥大化してる定番パターン",
-      "term_en": "MVC"
-    },
-    {
-      "id": "e3cd4590-9541-4eb3-9143-2038149906f3",
-      "term": "マイクロサービス",
-      "reading": "マイクロサービス",
-      "category": "アーキテクチャ",
-      "difficulty": "advanced",
-      "short_desc": "アプリケーションを小さな独立したサービスに分割するアーキテクチャ",
-      "full_desc": "## マイクロサービスとは\n\nマイクロサービスアーキテクチャは、アプリケーションを小さな独立したサービスの集合として構築する手法です。\n\n### メリット\n- 独立したデプロイ\n- 技術スタックの柔軟性\n- スケーラビリティ\n\n### デメリット\n- 複雑性の増加\n- 分散システムの課題",
-      "tags": [
-        "アーキテクチャ",
-        "スケーラビリティ"
-      ],
-      "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「スケーラブル！」と分割したら、デバッグで何個のログを見ればいいんだ状態",
-      "term_en": "Microservices"
-    },
-    {
-      "id": "7043b1b6-36f9-409f-ae07-128341362d98",
-      "term": "API",
-      "reading": "エーピーアイ",
-      "category": "Web",
-      "difficulty": "beginner",
-      "short_desc": "Application Programming Interfaceの略。ソフトウェア間の接続仕様",
-      "full_desc": "APIは、異なるソフトウェアやシステムが互いに通信するためのインターフェースです。",
-      "tags": [
-        "Web",
-        "インターフェース"
-      ],
-      "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「インターフェース」という名の、ドキュメントが古くて使い物にならないアレ",
-      "term_en": "API"
-    },
-    {
-      "id": "f9d97a9b-66fa-46cd-b139-487198f54952",
-      "term": "CSS",
-      "reading": "シーエスエス",
-      "category": "Web",
-      "difficulty": "beginner",
-      "short_desc": "Cascading Style Sheetsの略。Webページの見た目を定義",
-      "full_desc": "CSSは、HTMLで記述された要素のスタイル（色、サイズ、レイアウト等）を定義する言語です。",
-      "code_example": ".button {\n  background-color: #3B82F6;\n  color: white;\n  padding: 8px 16px;\n  border-radius: 4px;\n}",
-      "tags": [
-        "Web",
-        "スタイル"
-      ],
-      "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "中央揃え1つするのに Stack Overflow を3回見る魔法の言語",
-      "term_en": "CSS"
-    },
-    {
-      "id": "59cd2e96-154c-4067-9e5e-0ef00185f8d5",
-      "term": "IndexedDB",
-      "reading": "インデックスドディービー",
-      "category": "Database",
-      "difficulty": "intermediate",
-      "short_desc": "ブラウザ内で動作するNoSQLデータベース",
-      "full_desc": "IndexedDBは、ブラウザ内で大量のデータを永続化できるクライアントサイドストレージです。",
-      "code_example": "const db = await window.indexedDB.open('myDB', 1);\nconst tx = db.transaction('users', 'readwrite');\nawait tx.objectStore('users').add({ id: 1, name: 'Alice' });",
-      "tags": [
-        "ブラウザ",
-        "ストレージ",
-        "NoSQL"
-      ],
-      "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「ブラウザでDB！」と喜んだら、非同期地獄で心が折れるやつ",
-      "term_en": "IndexedDB"
-    },
-    {
-      "id": "311a1cfe-616c-4a37-af49-98cdc723d5f8",
-      "term": "React",
-      "reading": "リアクト",
-      "category": "プログラミング言語",
-      "difficulty": "intermediate",
-      "short_desc": "Facebookが開発したUIライブラリ",
-      "full_desc": "Reactは、ユーザーインターフェースを構築するためのJavaScriptライブラリです。コンポーネントベースで再利用性が高いのが特徴です。",
-      "code_example": "function Hello({ name }) {\n  return <h1>Hello, {name}!</h1>;\n}",
-      "tags": [
-        "JavaScript",
-        "UI",
-        "ライブラリ"
-      ],
-      "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「再利用性！」と言いつつ、useEffectの依存配列で3日悩むライブラリ",
-      "term_en": "React"
-    },
-    {
-      "id": "41d21825-72e2-493b-bf13-ea2af138fad0",
-      "term": "Webpack",
-      "reading": "ウェブパック",
-      "category": "ツール",
-      "difficulty": "intermediate",
-      "short_desc": "モジュールバンドラー。複数のファイルを1つにまとめる",
-      "full_desc": "Webpackは、JavaScriptファイルやCSS、画像などを依存関係を解決しながら1つ（または複数）のファイルにまとめるツールです。",
-      "tags": [
-        "ツール",
-        "ビルド"
-      ],
-      "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "設定ファイルが肥大化して、誰もメンテできなくなった遺産",
-      "term_en": "Webpack"
-    },
-    {
-      "id": "116682f8-2fd1-4838-b5a6-a9f16cd35f7c",
-      "term": "CI/CD",
-      "reading": "シーアイシーディー",
-      "category": "ツール",
-      "difficulty": "intermediate",
-      "short_desc": "Continuous Integration/Continuous Deliveryの略。継続的インテグレーション/デリバリー",
-      "full_desc": "CI/CDは、コードの変更を自動的にテスト・ビルド・デプロイするプロセスのことです。開発サイクルを高速化し、品質を向上させます。",
-      "tags": [
-        "DevOps",
-        "自動化"
-      ],
-      "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「自動化！」と導入したら、パイプラインのデバッグで手動より時間かかってる",
-      "term_en": "CI/CD"
-    },
-    {
-      "id": "dd37cebb-f838-4ed1-9276-e5a5cf412e3a",
-      "term": "DDD",
-      "reading": "ディーディーディー",
-      "category": "アーキテクチャ",
-      "difficulty": "advanced",
-      "short_desc": "Domain-Driven Designの略。ドメイン駆動設計",
-      "full_desc": "DDDは、複雑なビジネスロジックを持つシステムを、ドメイン（業務領域）を中心に設計する手法です。",
-      "tags": [
-        "設計手法",
-        "アーキテクチャ"
-      ],
-      "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「ドメイン中心！」と叫んだら、誰もドメインを理解していなかった",
-      "term_en": "DDD"
-    },
-    {
-      "id": "4568be6c-6914-4427-b528-ac614e144512",
-      "term": "OAuth",
-      "reading": "オーオース",
-      "category": "Web",
-      "difficulty": "advanced",
-      "short_desc": "認証・認可のためのオープンスタンダード",
-      "full_desc": "OAuthは、サードパーティアプリケーションがユーザーのリソースにアクセスする際の認可フレームワークです。パスワードを直接渡さずに権限を委譲できます。",
-      "tags": [
-        "セキュリティ",
-        "認証"
-      ],
-      "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「このアプリに全権限を与えますか？」→ 99%が何も読まずに承認する儀式",
-      "term_en": "OAuth"
-    },
-    {
-      "id": "abcb36e5-71b1-482d-bf9a-2b3e4e3d2f2d",
-      "term": "PWA",
-      "reading": "ピーダブリューエー",
-      "category": "Web",
-      "difficulty": "intermediate",
-      "short_desc": "Progressive Web Appsの略。Webアプリをネイティブアプリのように動作させる技術",
-      "full_desc": "PWAは、Service Workerなどの技術を使って、Webアプリをオフラインで動作させたり、ホーム画面に追加できるようにする技術です。",
-      "tags": [
-        "Web",
-        "モバイル",
-        "オフライン"
-      ],
-      "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "「ネイティブ並み！」と言うが、結局AppStoreに出せないやつ",
-      "term_en": "PWA"
-    },
-    {
-      "id": "c25c3548-f049-426c-b05c-3e878a44ca86",
-      "term": "レスポンシブデザイン",
-      "reading": "レスポンシブデザイン",
-      "category": "Web",
-      "difficulty": "beginner",
-      "short_desc": "デバイスの画面サイズに応じてレイアウトを変更する設計手法",
-      "full_desc": "レスポンシブデザインは、PC、タブレット、スマートフォンなど、様々な画面サイズに対応するデザイン手法です。",
-      "code_example": "@media (max-width: 768px) {\n  .container {\n    flex-direction: column;\n  }\n}",
-      "tags": [
-        "Web",
-        "デザイン",
-        "UI"
-      ],
-      "created_at": "2025-11-24T06:59:11.357Z",
-      "sarcastic_note": "media queryの閾値が10個になって、誰もメンテできなくなったやつ",
-      "term_en": "Responsive Design"
+      "term_en": "Responsive Design",
+      "sarcastic_notes": [
+        "「全デバイス対応！」と言いながら、実機で見たら崩壊してる",
+        "メディアクエリの条件分岐が複雑すぎて、もはや新しい言語",
+        "どんなサイズにも柔軟に対応。適応力の高いパートナー"
+      ]
     },
     {
       "id": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
@@ -695,8 +436,12 @@
         "基礎"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "divタグを20階層ネストして「semantic HTML」とか言ってるやつ",
-      "term_en": "HTML"
+      "term_en": "HTML",
+      "sarcastic_notes": [
+        "「マークアップ言語」であって「プログラミング言語」ではない。何度言えば",
+        "`<div>`の入れ子が深すぎて、閉じタグがどこか分からなくなる日常",
+        "HyperText Markup Language。ハイパーなテキストで興奮させる"
+      ]
     },
     {
       "id": "b2c3d4e5-f6a7-4b5c-9d0e-1f2a3b4c5d6e",
@@ -713,8 +458,12 @@
         "スクリプト"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「==」と「===」の違いで1時間悩んで、結局全部「===」にするやつ",
-      "term_en": "JavaScript"
+      "term_en": "JavaScript",
+      "sarcastic_notes": [
+        "`==`と`===`の違いを説明するだけで30分かかる言語",
+        "`this`が何を指してるか、書いた本人も分かってない",
+        "どこにでも挿入できる汎用性。ブラウザもサーバーも選ばない"
+      ]
     },
     {
       "id": "c3d4e5f6-a7b8-4c5d-0e1f-2a3b4c5d6e7f",
@@ -731,8 +480,12 @@
         "サーバー"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「JavaScriptだけで全部できる！」→ node_modulesが10GBになった",
-      "term_en": "Node.js"
+      "term_en": "Node.js",
+      "sarcastic_notes": [
+        "「フロントもバックも同じ言語！」という、罠への入口",
+        "`node_modules`のサイズがプロジェクト本体より大きくなる謎",
+        "シングルスレッドで頑張る。一人で複数相手にする器用さ"
+      ]
     },
     {
       "id": "d4e5f6a7-b8c9-4d5e-1f2a-3b4c5d6e7f8a",
@@ -749,8 +502,12 @@
         "JavaScript"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「npm install」したら依存関係エラーで止まる、毎朝の日課",
-      "term_en": "npm"
+      "term_en": "npm",
+      "sarcastic_notes": [
+        "`npm install`するたびに、依存関係が100個増える恐怖",
+        "left-padが消えて世界が止まった日を忘れない",
+        "Node Package Manager。パッケージを次々とインストールする"
+      ]
     },
     {
       "id": "e5f6a7b8-c9d0-4e5f-2a3b-4c5d6e7f8a9b",
@@ -767,8 +524,12 @@
         "ドキュメント"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "スキーマレスで楽だと思ったら、データの整合性が崩壊してる現実",
-      "term_en": "MongoDB"
+      "term_en": "MongoDB",
+      "sarcastic_notes": [
+        "「スキーマレスで柔軟！」と言いながら、結局スキーマ設計で悩む",
+        "JOINできないことに気づいた時の絶望感は異常",
+        "ドキュメント指向。形式ばらない自由な関係"
+      ]
     },
     {
       "id": "f6a7b8c9-d0e1-4f5a-3b4c-5d6e7f8a9b0c",
@@ -785,8 +546,12 @@
         "インメモリ"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「爆速！」と導入したら、メモリ不足でサーバーが死んだ",
-      "term_en": "Redis"
+      "term_en": "Redis",
+      "sarcastic_notes": [
+        "「インメモリだから速い！」→ 再起動したらデータ消えた",
+        "キャッシュのつもりが、いつの間にか本番DBになってる闇",
+        "メモリの中で高速に動く。熱くて速い"
+      ]
     },
     {
       "id": "a7b8c9d0-e1f2-4a5b-4c5d-6e7f8a9b0c1d",
@@ -803,8 +568,12 @@
         "SQL"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「MySQLより高機能！」と選んだら、マイグレーションで詰んだ",
-      "term_en": "PostgreSQL"
+      "term_en": "PostgreSQL",
+      "sarcastic_notes": [
+        "「機能豊富！」と言いながら、その機能を使いこなせてない現実",
+        "MySQL派との宗教戦争は永遠に終わらない",
+        "象がシンボル。大きくて頼りになる存在"
+      ]
     },
     {
       "id": "b8c9d0e1-f2a3-4b5c-5d6e-7f8a9b0c1d2e",
@@ -821,8 +590,12 @@
         "SQL"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「初心者向け！」と始めたら、文字コードの沼にハマった",
-      "term_en": "MySQL"
+      "term_en": "MySQL",
+      "sarcastic_notes": [
+        "「みんな使ってる」が唯一の採用理由になりがちなDB",
+        "PostgreSQL派に「それMySQLでしょ」と言われる屈辱",
+        "イルカがシンボル。水中で素早く動き回る"
+      ]
     },
     {
       "id": "c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f",
@@ -839,8 +612,12 @@
         "AI"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「誰でも読める！」と言うが、インデントが1つずれて1時間溶けた",
-      "term_en": "Python"
+      "term_en": "Python",
+      "sarcastic_notes": [
+        "インデントがズレただけでエラー。几帳面すぎる言語",
+        "「読みやすい」と言いながら、ワンライナーで書く人種がいる",
+        "蛇がシンボル。絡みつくように習得していく"
+      ]
     },
     {
       "id": "d0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a",
@@ -857,8 +634,12 @@
         "エンタープライズ"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "Hello Worldを書くのに5行必要な冗長性の王様",
-      "term_en": "Java"
+      "term_en": "Java",
+      "sarcastic_notes": [
+        "`AbstractSingletonProxyFactoryBean`みたいなクラス名が普通に存在する世界",
+        "「Write Once, Run Anywhere」→ 実際は「Debug Everywhere」",
+        "コーヒーがシンボル。苦くて目が覚める"
+      ]
     },
     {
       "id": "e1f2a3b4-c5d6-4e7f-8a9b-0c1d2e3f4a5b",
@@ -875,8 +656,12 @@
         "並行処理"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「シンプル！」と言うが、エラーハンドリングで `if err != nil` を100回書く",
-      "term_en": "Go"
+      "term_en": "Go",
+      "sarcastic_notes": [
+        "「シンプルで速い！」と言いながら、エラーハンドリングで発狂する",
+        "ジェネリクスがなかった時代を生き延びた猛者たちがいる",
+        "Golangとも呼ばれる。Go!と叫びたくなる"
+      ]
     },
     {
       "id": "f2a3b4c5-d6e7-4f8a-9b0c-1d2e3f4a5b6c",
@@ -893,8 +678,12 @@
         "メモリ安全"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「安全！」と学び始めたら、borrowチェッカーに怒られ続けて3日で挫折",
-      "term_en": "Rust"
+      "term_en": "Rust",
+      "sarcastic_notes": [
+        "「メモリ安全！」と言いながら、コンパイラに怒られ続ける日々",
+        "所有権の概念を理解した瞬間、他の言語が怖くなる",
+        "錆びないほど堅固。所有権という束縛を受け入れる"
+      ]
     },
     {
       "id": "a3b4c5d6-e7f8-4a9b-0c1d-2e3f4a5b6c7d",
@@ -911,8 +700,12 @@
         "システム"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "セグメンテーション違反で何時間も悩んで、ポインタを呪う日々",
-      "term_en": "C++"
+      "term_en": "C++",
+      "sarcastic_notes": [
+        "「何でもできる」は「何でも壊せる」と同義",
+        "メモリリークを探して徹夜した回数が経験値になる言語",
+        "Cにプラスプラス。進化系はより複雑"
+      ]
     },
     {
       "id": "b4c5d6e7-f8a9-4b0c-1d2e-3f4a5b6c7d8e",
@@ -929,8 +722,12 @@
         "サーバーサイド"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「もう古い」と言われ続けて20年、でもWordPressでまだ現役",
-      "term_en": "PHP"
+      "term_en": "PHP",
+      "sarcastic_notes": [
+        "「Webに最適！」と言いながら、WordPressのコードを見て絶望",
+        "変数の前に`$`をつける文化、未だに慣れない",
+        "Personal Home Page。個人的な関係から始まる"
+      ]
     },
     {
       "id": "c5d6e7f8-a9b0-4c1d-2e3f-4a5b6c7d8e9f",
@@ -947,8 +744,12 @@
         "オブジェクト指向"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「楽しい！」と始めたら、Railsのマジックで何が起きてるか分からない",
-      "term_en": "Ruby"
+      "term_en": "Ruby",
+      "sarcastic_notes": [
+        "「楽しいプログラミング！」というキャッチコピーと現実の乖離",
+        "Railsに乗らないRubyは、電車に乗らない通勤のよう",
+        "宝石がシンボル。磨けば光る"
+      ]
     },
     {
       "id": "d6e7f8a9-b0c1-4d2e-3f4a-5b6c7d8e9f0a",
@@ -965,8 +766,12 @@
         "Apple"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "Apple製品でしか使えない、最高に囲い込まれた言語",
-      "term_en": "Swift"
+      "term_en": "Swift",
+      "sarcastic_notes": [
+        "「Objective-Cより簡単！」という、ハードル低すぎる比較",
+        "iOSアプリを作りたいだけなのに、Xcodeと戦う羽目になる",
+        "速くて安全。スピード感のある関係"
+      ]
     },
     {
       "id": "e7f8a9b0-c1d2-4e3f-4a5b-6c7d8e9f0a1b",
@@ -983,8 +788,12 @@
         "Android"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「Javaより簡潔！」と喜んだら、null安全で頭が混乱した",
-      "term_en": "Kotlin"
+      "term_en": "Kotlin",
+      "sarcastic_notes": [
+        "「Javaより簡潔！」という、これもハードル低い比較",
+        "Null安全と言いながら、`!!`を使う誘惑に負ける",
+        "Javaの進化系。より洗練された関係"
+      ]
     },
     {
       "id": "f8a9b0c1-d2e3-4f4a-5b6c-7d8e9f0a1b2c",
@@ -1001,8 +810,12 @@
         "UI"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「簡単！」と始めたら、Vue3で全部破壊的変更された",
-      "term_en": "Vue.js"
+      "term_en": "Vue.js",
+      "sarcastic_notes": [
+        "「学習コストが低い」と言われて入門したら、Composition APIで迷子",
+        "v2とv3の違いで炎上するコミュニティ",
+        "リアクティブなデータバインディング。反応が良すぎる"
+      ]
     },
     {
       "id": "a9b0c1d2-e3f4-4a5b-6c7d-8e9f0a1b2c3d",
@@ -1019,8 +832,12 @@
         "TypeScript"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「フルスタック！」と導入したら、学習コストが高すぎて誰も理解できない",
-      "term_en": "Angular"
+      "term_en": "Angular",
+      "sarcastic_notes": [
+        "「フルスタックフレームワーク！」という名の、覚えること多すぎ問題",
+        "バージョンアップのたびにプロジェクトが壊れる伝統",
+        "Googleが作った堅牢なフレームワーク。支配的"
+      ]
     },
     {
       "id": "b0c1d2e3-f4a5-4b6c-7d8e-9f0a1b2c3d4e",
@@ -1037,8 +854,12 @@
         "SSR"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「簡単にSSR！」と言うが、App RouterとPages Routerで混乱してる",
-      "term_en": "Next.js"
+      "term_en": "Next.js",
+      "sarcastic_notes": [
+        "「Reactをより簡単に！」と言いながら、設定で1週間溶ける",
+        "SSR、SSG、ISR、CSR。略語多すぎて何が何だか",
+        "Reactの次のステップ。より深い関係へ"
+      ]
     },
     {
       "id": "c1d2e3f4-a5b6-4c7d-8e9f-0a1b2c3d4e5f",
@@ -1055,8 +876,12 @@
         "Web"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「ミニマル！」と言いつつ、ミドルウェア地獄で何が動いてるか分からない",
-      "term_en": "Express"
+      "term_en": "Express",
+      "sarcastic_notes": [
+        "「ミニマリスト！」と言いながら、ミドルウェアで太っていく",
+        "Node.jsのデファクトと言いつつ、毎年「次の標準」が出てくる",
+        "高速で軽量なフレームワーク。余計なものを削ぎ落とした関係"
+      ]
     },
     {
       "id": "d2e3f4a5-b6c7-4d8e-9f0a-1b2c3d4e5f6a",
@@ -1073,8 +898,12 @@
         "Web"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「全部入り！」と喜んだら、Djangoのやり方に従わないと何もできない",
-      "term_en": "Django"
+      "term_en": "Django",
+      "sarcastic_notes": [
+        "「バッテリー同梱！」と言いながら、使わない機能が多すぎる",
+        "管理画面が便利すぎて、そこから離れられなくなる罠",
+        "Pythonの堅牢なフレームワーク。包容力がある"
+      ]
     },
     {
       "id": "e3f4a5b6-c7d8-4e9f-0a1b-2c3d4e5f6a7b",
@@ -1091,8 +920,12 @@
         "Web"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「軽量！」と始めたら、結局拡張しまくってDjangoより重くなった",
-      "term_en": "Flask"
+      "term_en": "Flask",
+      "sarcastic_notes": [
+        "「マイクロフレームワーク！」が、気づいたらマクロになってる",
+        "自由度が高いという名の「自分で全部やれ」",
+        "軽量でシンプル。最低限の関係"
+      ]
     },
     {
       "id": "f4a5b6c7-d8e9-4f0a-1b2c-3d4e5f6a7b8c",
@@ -1109,8 +942,12 @@
         "Web"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「柔軟！」と導入したら、N+1問題で本番サーバーが落ちた",
-      "term_en": "GraphQL"
+      "term_en": "GraphQL",
+      "sarcastic_notes": [
+        "「必要なデータだけ取得！」と言いながら、クエリが複雑すぎて結局全部取る",
+        "スキーマ定義に時間をかけすぎて、実装が進まない病",
+        "グラフのように繋がったデータ。複雑な関係性"
+      ]
     },
     {
       "id": "a5b6c7d8-e9f0-4a1b-2c3d-4e5f6a7b8c9d",
@@ -1127,8 +964,12 @@
         "通信"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「リアルタイム！」と実装したら、接続管理で地獄を見た",
-      "term_en": "WebSocket"
+      "term_en": "WebSocket",
+      "sarcastic_notes": [
+        "「リアルタイム通信！」と言いながら、コネクション管理で地獄を見る",
+        "切断されたことに気づかないまま、虚空にメッセージを送り続ける",
+        "双方向通信。常に繋がり続ける関係"
+      ]
     },
     {
       "id": "b6c7d8e9-f0a1-4b2c-3d4e-5f6a7b8c9d0e",
@@ -1145,8 +986,12 @@
         "マイクロサービス"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「高速！」と導入したら、デバッグがバイナリで何も見えない",
-      "term_en": "gRPC"
+      "term_en": "gRPC",
+      "sarcastic_notes": [
+        "「RESTより速い！」と言いながら、デバッグが地獄",
+        "Protocol Buffersを理解するところから始まる長い旅",
+        "高速で効率的な通信。無駄のない関係"
+      ]
     },
     {
       "id": "c7d8e9f0-a1b2-4c3d-4e5f-6a7b8c9d0e1f",
@@ -1163,8 +1008,12 @@
         "スタイル"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「保守性向上！」と導入したら、ネストが深すぎて誰も読めない",
-      "term_en": "Sass"
+      "term_en": "Sass",
+      "sarcastic_notes": [
+        "「CSSを便利に！」と言いながら、ネストしすぎて可読性ゼロ",
+        "変数使えて嬉しいのは最初だけ。結局CSSに戻る人も",
+        "CSSをより強力に。装飾への執着"
+      ]
     },
     {
       "id": "d8e9f0a1-b2c3-4d4e-5f6a-7b8c9d0e1f2a",
@@ -1181,8 +1030,12 @@
         "UI"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "classNameが20個並んで、何のコンポーネントか分からない",
-      "term_en": "Tailwind CSS"
+      "term_en": "Tailwind CSS",
+      "sarcastic_notes": [
+        "「ユーティリティファースト！」という名の、クラス名地獄",
+        "HTMLがクラス名で埋め尽くされて、何が何だか分からない",
+        "クラスをたくさん付ける。装飾過多"
+      ]
     },
     {
       "id": "e9f0a1b2-c3d4-4e5f-6a7b-8c9d0e1f2a3b",
@@ -1199,8 +1052,12 @@
         "レスポンシブ"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「簡単！」と使ったら、どのサイトも同じデザインになった",
-      "term_en": "Bootstrap"
+      "term_en": "Bootstrap",
+      "sarcastic_notes": [
+        "「どのサイトも同じに見える」問題を20年解決できてない",
+        "カスタマイズしようとした瞬間、Bootstrapを使う意味がなくなる",
+        "手軽に見栄えが良くなる。即席の関係"
+      ]
     },
     {
       "id": "f0a1b2c3-d4e5-4f6a-7b8c-9d0e1f2a3b4c",
@@ -1217,8 +1074,12 @@
         "JavaScript"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「コード品質向上！」と導入したら、赤線だらけで何も書けない",
-      "term_en": "ESLint"
+      "term_en": "ESLint",
+      "sarcastic_notes": [
+        "チームで設定を統一するまでに3回は喧嘩になる",
+        "赤い波線を消すためにコードを書き換える本末転倒",
+        "コードの品質を監視。厳しい目で見られる"
+      ]
     },
     {
       "id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
@@ -1235,8 +1096,12 @@
         "コード整形"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「自動整形！」と導入したら、ESLintと喧嘩して設定で1日潰れた",
-      "term_en": "Prettier"
+      "term_en": "Prettier",
+      "sarcastic_notes": [
+        "「設定不要！」と言いながら、prettierrcを書く人が多数",
+        "整形結果が気に入らなくて手動で直すという矛盾",
+        "コードを美しく整形。見た目重視"
+      ]
     },
     {
       "id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e",
@@ -1253,8 +1118,12 @@
         "JavaScript"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「テスト書くぞ！」と意気込んだら、モックの書き方で挫折した",
-      "term_en": "Jest"
+      "term_en": "Jest",
+      "sarcastic_notes": [
+        "「テスト書くの簡単！」と言いながら、モックで3時間溶ける",
+        "テストカバレッジ100%を目指して、意味のないテストが増える",
+        "テストを実行。合格か不合格か、白黒はっきり"
+      ]
     },
     {
       "id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e7f",
@@ -1271,8 +1140,12 @@
         "開発環境"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「爆速！」と乗り換えたら、プラグインの互換性で詰んだ",
-      "term_en": "Vite"
+      "term_en": "Vite",
+      "sarcastic_notes": [
+        "「爆速！」と言いながら、本番ビルドで謎のエラーが出る",
+        "Webpackから移行したいけど、設定の互換性で詰む",
+        "高速な開発サーバー。待たされない関係"
+      ]
     },
     {
       "id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a",
@@ -1289,8 +1162,12 @@
         "JavaScript"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「最新構文！」と使ったら、ビルド時間が5倍になった",
-      "term_en": "Babel"
+      "term_en": "Babel",
+      "sarcastic_notes": [
+        "「最新のJS構文を使える！」と言いながら、設定地獄",
+        "プリセットとプラグインの組み合わせが無限にある闇",
+        "古いブラウザにも対応。幅広く受け入れる"
+      ]
     },
     {
       "id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a9b",
@@ -1306,8 +1183,12 @@
         "テスト"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「便利！」と使ってたら、いつの間にかログイン必須の有料機能だらけ",
-      "term_en": "Postman"
+      "term_en": "Postman",
+      "sarcastic_notes": [
+        "APIテストツールなのに、チーム共有で課金させられる",
+        "コレクションが増えすぎて、どれがどれだか分からなくなる",
+        "リクエストを送り続ける。疲れ知らず"
+      ]
     },
     {
       "id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b0c",
@@ -1323,8 +1204,12 @@
         "IDE"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "拡張機能を入れすぎて、起動が遅くなって本末転倒",
-      "term_en": "VS Code"
+      "term_en": "VS Code",
+      "sarcastic_notes": [
+        "拡張機能を入れすぎて、起動に30秒かかるエディタ",
+        "設定同期が壊れて、全部やり直しになる定期イベント",
+        "Visual Studio Code。見た目も中身も充実"
+      ]
     },
     {
       "id": "a7b8c9d0-e1f2-4a3b-4c5d-6e7f8a9b0c1d",
@@ -1340,8 +1225,12 @@
         "バージョン管理"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「オープンソース！」と公開したら、誰もスター付けてくれない",
-      "term_en": "GitHub"
+      "term_en": "GitHub",
+      "sarcastic_notes": [
+        "「草を生やす」という謎の文化が生産性を狂わせる",
+        "プライベートリポジトリを公開にした瞬間の恐怖",
+        "コードを共有するプラットフォーム。オープンな関係"
+      ]
     },
     {
       "id": "b8c9d0e1-f2a3-4b4c-5d6e-7f8a9b0c1d2e",
@@ -1358,8 +1247,12 @@
         "インフラ"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「自動化！」と導入したら、YAMLファイルが100個になって管理不能",
-      "term_en": "Kubernetes"
+      "term_en": "Kubernetes",
+      "sarcastic_notes": [
+        "「コンテナオーケストレーション！」という名の、YAML地獄",
+        "kubectlのコマンドを覚える頃には、もうプロジェクト終わってる",
+        "コンテナを管理。複数を同時に扱う"
+      ]
     },
     {
       "id": "913a7323-0300-4586-81ea-b8dd0a800684",
@@ -1376,8 +1269,12 @@
         "自動化"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「インフラをコード化！」と始めたら、stateファイルが壊れて全部やり直し",
-      "term_en": "Terraform"
+      "term_en": "Terraform",
+      "sarcastic_notes": [
+        "「Infrastructure as Code！」と言いながら、stateファイルで詰む",
+        "plan と apply の間で何が起きるか、神のみぞ知る",
+        "インフラをコードで定義。支配下に置く"
+      ]
     },
     {
       "id": "9ccdf43f-f051-4cf8-8b73-150e2903b95d",
@@ -1393,8 +1290,12 @@
         "サービス"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「無料枠！」と始めたら、翌月10万円の請求が来た",
-      "term_en": "AWS"
+      "term_en": "AWS",
+      "sarcastic_notes": [
+        "サービス多すぎて、何を使えばいいか分からない病",
+        "請求書を見て「何にこんなにかかってる？」となる月末",
+        "Amazon Web Services。何でも揃ってる"
+      ]
     },
     {
       "id": "03b62fa3-92ab-4beb-810f-24189199d6f7",
@@ -1411,8 +1312,12 @@
         "モバイル"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「簡単バックエンド！」と始めたら、料金体系が複雑すぎて理解不能",
-      "term_en": "Firebase"
+      "term_en": "Firebase",
+      "sarcastic_notes": [
+        "「サーバーレスで楽！」と言いながら、従量課金で青ざめる",
+        "リアルタイムDBの同期が暴走して、無限ループに陥る恐怖",
+        "Googleのプラットフォーム。手軽に燃え上がる"
+      ]
     },
     {
       "id": "8c869c42-9e9d-4cea-b7de-df743b2f5714",
@@ -1428,8 +1333,12 @@
         "アーキテクチャ"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「原則守る！」と意気込んだら、抽象化しすぎて誰も理解できない",
-      "term_en": "SOLID Principles"
+      "term_en": "SOLID Principles",
+      "sarcastic_notes": [
+        "5つ全部守ってるコード、見たことない",
+        "原則を説明できても、実践できてるかは別問題",
+        "5つの原則。守れば硬くなる"
+      ]
     },
     {
       "id": "abfc012e-edba-41d0-8f38-b4e4161f5ab9",
@@ -1445,8 +1354,12 @@
         "オブジェクト指向"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「パターン適用！」と言いながら、無理やり当てはめて複雑化させるやつ",
-      "term_en": "Design Pattern"
+      "term_en": "Design Pattern",
+      "sarcastic_notes": [
+        "「GoF本読みました」が、マウントの始まり",
+        "パターン名を言いたいだけで、不要な設計を入れる病",
+        "23個のパターン。体位のバリエーションのよう"
+      ]
     },
     {
       "id": "95d65a94-be4b-42fd-9501-27b4e73fbe20",
@@ -1462,8 +1375,12 @@
         "分離"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「層を分離！」と言いつつ、気づいたら層を飛び越えまくってる",
-      "term_en": "Layered Architecture"
+      "term_en": "Layered Architecture",
+      "sarcastic_notes": [
+        "層を分けた結果、どの層で何をするか揉める",
+        "「これはどの層？」という議論で1時間溶ける",
+        "層ごとに分ける。玉ねぎのように剥いていく"
+      ]
     },
     {
       "id": "ffbae800-313e-4dab-b560-1a342e5d1d17",
@@ -1479,8 +1396,12 @@
         "依存関係"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「ビジネスロジックを独立！」と実装したら、インターフェース地獄で開発速度が死んだ",
-      "term_en": "Clean Architecture"
+      "term_en": "Clean Architecture",
+      "sarcastic_notes": [
+        "叔父貴の本を読んで、分かった気になる罠",
+        "依存の方向を揃えることに必死で、機能が進まない",
+        "綺麗に分離。清潔な関係"
+      ]
     },
     {
       "id": "5c1d3328-8b21-451f-833a-90192bf63cc2",
@@ -1496,8 +1417,12 @@
         "設計"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「読み書き分離！」と実装したら、整合性を保つのが地獄になった",
-      "term_en": "CQRS"
+      "term_en": "CQRS",
+      "sarcastic_notes": [
+        "読み取りと書き込みを分けた結果、複雑さが2倍",
+        "イベントソーシングとセットで語られがち。理解は3倍難しい",
+        "Command Query Responsibility Segregation。読み書き分離"
+      ]
     },
     {
       "id": "0d3ba5ba-17ab-4dcc-b05e-ad0dd910bf7b",
@@ -1513,8 +1438,12 @@
         "非同期"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「疎結合！」と実装したら、イベントの順序が保証されなくてバグ祭り",
-      "term_en": "Event-Driven Architecture"
+      "term_en": "Event-Driven Architecture",
+      "sarcastic_notes": [
+        "「疎結合！」と言いながら、イベントの順序で地獄を見る",
+        "誰が何を購読してるか、もはや誰も把握してない",
+        "イベントに反応して動く。受け身な関係"
+      ]
     },
     {
       "id": "e7428742-1697-4adb-91c4-0c71fd431725",
@@ -1531,8 +1460,12 @@
         "FaaS"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「サーバー管理不要！」と喜んだら、コールドスタートで5秒待たされる",
-      "term_en": "Serverless"
+      "term_en": "Serverless",
+      "sarcastic_notes": [
+        "「サーバー管理不要！」という名の、ベンダーロックイン",
+        "コールドスタートの遅さに絶望する朝",
+        "サーバーがない。身軽な関係"
+      ]
     },
     {
       "id": "1c0aa1a1-6a04-4ad2-9260-55db1f5c508e",
@@ -1548,8 +1481,12 @@
         "設計"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「最適化！」と作ったら、BFFが増殖して管理できなくなった",
-      "term_en": "BFF"
+      "term_en": "BFF",
+      "sarcastic_notes": [
+        "Backend For Frontendなのに、何でもやらされる",
+        "結局、BFFが肥大化してモノリスに戻る",
+        "フロントエンドのためのバックエンド。尽くすタイプ"
+      ]
     },
     {
       "id": "731b9675-dc8a-4261-a880-fd5e9e81e60b",
@@ -1566,8 +1503,12 @@
         "トークン"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「ステートレス！」と使ったら、トークンのリフレッシュ処理で詰んだ",
-      "term_en": "JWT"
+      "term_en": "JWT",
+      "sarcastic_notes": [
+        "「ステートレス認証！」と言いながら、無効化で詰む",
+        "ペイロードに何でも入れて、トークンが巨大化する病",
+        "JSON Web Token。トークンを渡して関係を証明"
+      ]
     },
     {
       "id": "ad812376-9c37-4f87-91e8-db213d21d4ed",
@@ -1584,8 +1525,12 @@
         "HTTP"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「セキュリティ！」と言いながら、エラーが出たら全部 '*' で許可するやつ",
-      "term_en": "CORS"
+      "term_en": "CORS",
+      "sarcastic_notes": [
+        "「なぜ動かないんだ」の9割はCORSが原因",
+        "とりあえず`*`を設定して、セキュリティを捨てる誘惑",
+        "Cross-Origin Resource Sharing。異なるオリジン間での共有"
+      ]
     },
     {
       "id": "dbb3542b-09c2-45e8-89a0-fe502e110c27",
@@ -1602,8 +1547,12 @@
         "抽象化"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「SQL不要！」と喜んだら、N+1問題でクエリが1000個発行された",
-      "term_en": "ORM"
+      "term_en": "ORM",
+      "sarcastic_notes": [
+        "「SQLを書かなくていい！」と言いながら、生SQLを書く羽目になる",
+        "N+1問題に気づいた時には、もう手遅れ",
+        "Object-Relational Mapping。オブジェクトとDBの橋渡し"
+      ]
     },
     {
       "id": "46184ce2-36c9-426f-8d50-700d846eaa56",
@@ -1620,8 +1569,12 @@
         "ACID"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「ACID準拠！」と言いつつ、デッドロックで本番が止まったことある？",
-      "term_en": "Transaction"
+      "term_en": "Transaction",
+      "sarcastic_notes": [
+        "「ACID特性！」と言いながら、分散トランザクションで発狂",
+        "コミットかロールバックか、人生も選べたらいいのに",
+        "最後までやり遂げるか、全部なかったことにするか。責任重大"
+      ]
     },
     {
       "id": "e7d1e08a-da7b-42ec-afd1-f679b90c061c",
@@ -1638,8 +1591,12 @@
         "最適化"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「高速化！」とインデックス貼りまくったら、INSERT が遅くなって本末転倒",
-      "term_en": "Index"
+      "term_en": "Index",
+      "sarcastic_notes": [
+        "「インデックス貼れば速い！」と貼りすぎて書き込みが死ぬ",
+        "EXPLAIN ANALYZEを見ても、何が起きてるか分からない",
+        "目的の場所に素早くアクセス。効率的な関係"
+      ]
     },
     {
       "id": "4b0efd03-4d49-4958-8bf2-070c27bba027",
@@ -1655,8 +1612,12 @@
         "正規化"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「第3正規形！」と設計したら、JOINしまくってクエリが遅くなった",
-      "term_en": "Normalization"
+      "term_en": "Normalization",
+      "sarcastic_notes": [
+        "「第3正規形まで！」と言いながら、パフォーマンスで妥協する",
+        "正規化しすぎてJOIN地獄、しなさすぎて更新地獄",
+        "データの重複を排除。純粋な関係"
+      ]
     },
     {
       "id": "6fb42c3f-e0a3-4034-b083-93398452ce95",
@@ -1672,8 +1633,12 @@
         "分散"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「スケールアウト！」と分割したら、JOIN が使えなくて絶望した",
-      "term_en": "Sharding"
+      "term_en": "Sharding",
+      "sarcastic_notes": [
+        "「スケールアウト！」と言いながら、どこにデータがあるか分からなくなる",
+        "シャードキーの選択を間違えた瞬間、全てが終わる",
+        "データを分割して分散。複数に分けて相手をする"
+      ]
     },
     {
       "id": "026ade1e-50cb-4b04-9651-36017903be33",
@@ -1689,8 +1654,12 @@
         "分散"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「冗長化！」と設定したら、レプリケーション遅延でデータ不整合が起きた",
-      "term_en": "Replication"
+      "term_en": "Replication",
+      "sarcastic_notes": [
+        "「冗長化！」と言いながら、レプリケーション遅延で整合性が崩壊",
+        "マスターとスレーブという用語が最近変わった。時代",
+        "データを複製。同じものを複数作る"
+      ]
     },
     {
       "id": "7bee2b9c-e778-421f-b3be-a087c4a21915",
@@ -1706,8 +1675,12 @@
         "高速化"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「高速化！」とキャッシュ入れたら、キャッシュクリアのタイミングで詰んだ",
-      "term_en": "Cache"
+      "term_en": "Cache",
+      "sarcastic_notes": [
+        "「キャッシュで速く！」と言いながら、キャッシュ破棄で悩む",
+        "「キャッシュが原因です」という、万能の言い訳",
+        "よく使うデータを手元に置く。すぐ出せる関係"
+      ]
     },
     {
       "id": "714d30a4-41c7-4ee1-8c71-eea40582f6e6",
@@ -1723,8 +1696,12 @@
         "API"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「一元管理！」と導入したら、ゲートウェイが単一障害点になった",
-      "term_en": "API Gateway"
+      "term_en": "API Gateway",
+      "sarcastic_notes": [
+        "「一元管理！」と言いながら、単一障害点になる罠",
+        "レート制限を設定して、自分たちが制限される悲劇",
+        "全てのAPIの入口。門番役"
+      ]
     },
     {
       "id": "a26aebd9-d5ba-453e-b8d3-a834af8b8319",
@@ -1740,8 +1717,12 @@
         "可用性"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「負荷分散！」と設定したら、セッション管理で詰んだ",
-      "term_en": "Load Balancer"
+      "term_en": "Load Balancer",
+      "sarcastic_notes": [
+        "「負荷分散！」と言いながら、スティッキーセッションで台無し",
+        "ヘルスチェックが通らなくて、全台落ちる悪夢",
+        "負荷を分散。複数で分担"
+      ]
     },
     {
       "id": "c28c34a0-504d-4ea2-9fa7-1dde027c57a4",
@@ -1757,8 +1738,12 @@
         "インフラ"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「世界中で高速！」と導入したら、キャッシュパージに30分かかってる",
-      "term_en": "CDN"
+      "term_en": "CDN",
+      "sarcastic_notes": [
+        "「エッジで配信！」と言いながら、キャッシュパージで混乱",
+        "CDNの障害で全世界のサイトが落ちる依存度",
+        "Content Delivery Network。世界中に配置"
+      ]
     },
     {
       "id": "30f8b5a0-350e-4aaa-ae6c-ff8fdadbff20",
@@ -1775,8 +1760,12 @@
         "CLI"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「効率的！」と学び始めたら、終了方法が分からなくて3時間閉じ込められた",
-      "term_en": "Vim"
+      "term_en": "Vim",
+      "sarcastic_notes": [
+        "「どうやって終了するの？」がミームになった伝説のエディタ",
+        "`:wq`を覚えた瞬間、他のエディタが物足りなくなる呪い",
+        "一度入ったら抜け出せない。:wq!で強制終了"
+      ]
     },
     {
       "id": "417925fa-9fba-49d0-90c8-5f33a1d5ba76",
@@ -1793,8 +1782,12 @@
         "CLI"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「便利！」と設定ファイルをカスタマイズしたら、キーバインドを全部忘れた",
-      "term_en": "tmux"
+      "term_en": "tmux",
+      "sarcastic_notes": [
+        "「画面分割便利！」と言いながら、プレフィックスキーを忘れる",
+        "設定ファイルを凝りすぎて、素のtmuxが使えなくなる",
+        "複数のセッションを同時に扱う。並行作業"
+      ]
     },
     {
       "id": "4a3c92de-10c9-42c1-bdff-6de87ad10326",
@@ -1811,8 +1804,12 @@
         "インフラ"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「高性能！」と設定したら、設定ファイルの文法エラーで1時間潰れた",
-      "term_en": "Nginx"
+      "term_en": "Nginx",
+      "sarcastic_notes": [
+        "「高速！」と言いながら、設定ファイルの書き方で3時間溶ける",
+        "location ディレクティブの優先順位、毎回調べる",
+        "リバースプロキシとして働く。中継役"
+      ]
     },
     {
       "id": "6d58da72-238d-41ab-afd9-54117f5dabe1",
@@ -1829,8 +1826,12 @@
         "インフラ"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「安定！」と使ってたら、Nginxが速いと聞いて乗り換えブーム",
-      "term_en": "Apache"
+      "term_en": "Apache",
+      "sarcastic_notes": [
+        "「枯れた技術」と言われながら、まだ現役の老兵",
+        ".htaccessの書き方、毎回ググる",
+        "歴史あるWebサーバー。ベテランの安心感"
+      ]
     },
     {
       "id": "bff8a24e-c878-4f6b-86c3-50b494853ae1",
@@ -1847,8 +1848,12 @@
         "ドキュメント"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「ドキュメント自動生成！」と喜んだら、実装とずれてて誰も信用しない",
-      "term_en": "Swagger"
+      "term_en": "Swagger",
+      "sarcastic_notes": [
+        "「ドキュメント自動生成！」と言いながら、アノテーション地獄",
+        "Swaggerを見て実装したら、実際と違ってた絶望",
+        "APIの仕様を定義。お互いの期待を明確に"
+      ]
     },
     {
       "id": "cc2de3c1-f67a-4e3d-ad9a-530578ce8317",
@@ -1864,8 +1869,12 @@
         "開発手法"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「コード共有！」と統合したら、ビルドに30分かかって開発が止まった",
-      "term_en": "Monorepo"
+      "term_en": "Monorepo",
+      "sarcastic_notes": [
+        "「一元管理！」と言いながら、CIが遅すぎて発狂",
+        "パッケージ間の依存関係が複雑すぎて、誰も触れなくなる",
+        "全部を一つのリポジトリに。一緒に住む関係"
+      ]
     },
     {
       "id": "5ba08aed-b6cf-4808-a149-46a75d24476b",
@@ -1881,8 +1890,12 @@
         "コード品質"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「品質向上！」と厳格設定にしたら、チーム全員が無視し始めた",
-      "term_en": "Linter"
+      "term_en": "Linter",
+      "sarcastic_notes": [
+        "「コード品質向上！」と言いながら、警告を無視するチーム",
+        "ルールを追加するたびに、既存コードが真っ赤になる",
+        "コードの問題を指摘。厳しい目"
+      ]
     },
     {
       "id": "55527d2c-c3e6-45da-b74b-c8955ed80ef1",
@@ -1898,8 +1911,12 @@
         "品質"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「品質向上！」と始めたら、テスト書くのに時間かかりすぎて納期が死んだ",
-      "term_en": "TDD"
+      "term_en": "TDD",
+      "sarcastic_notes": [
+        "「テスト駆動！」と言いながら、実装後にテストを書く現実",
+        "Red-Green-Refactorを守れてる人、見たことない",
+        "テストを先に書く。前戯が大事"
+      ]
     },
     {
       "id": "d217c6d7-8070-4b48-bda3-e4647e7b7866",
@@ -1914,8 +1931,12 @@
         "プロジェクト管理"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「柔軟に対応！」と言いつつ、スプリント計画会議が3時間かかってる",
-      "term_en": "Agile"
+      "term_en": "Agile",
+      "sarcastic_notes": [
+        "「顧客と協調！」と言いながら、スプリント終わりに仕様変更",
+        "アジャイルと名乗れば何でも許されると思ってる人がいる",
+        "機敏に動く。臨機応変な関係"
+      ]
     },
     {
       "id": "1fda8be6-e8cf-4aec-84b8-3b6643f4664a",
@@ -1931,8 +1952,12 @@
         "開発手法"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「透明性！」と毎日15分の朝会が、気づいたら1時間になってる",
-      "term_en": "Scrum"
+      "term_en": "Scrum",
+      "sarcastic_notes": [
+        "「自己組織化チーム！」と言いながら、上から指示が飛んでくる",
+        "デイリースクラムが15分で終わった試しがない",
+        "チームでスプリント。みんなで一緒に走る"
+      ]
     },
     {
       "id": "3aef0cc2-48db-4a31-80dd-642cdf8529ba",
@@ -1948,8 +1973,12 @@
         "開発手法"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「綺麗にする！」と始めたら、リファクタリング中に新しいバグを3個作った",
-      "term_en": "Refactoring"
+      "term_en": "Refactoring",
+      "sarcastic_notes": [
+        "「動いてるコードを触るな」VS「技術的負債」の永遠の戦い",
+        "リファクタリングのつもりが、バグを埋め込む日常",
+        "コードを整理。関係の見直し"
+      ]
     },
     {
       "id": "7c7c0134-db9e-4516-ad0a-7154f2b7be52",
@@ -1965,8 +1994,12 @@
         "品質"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「知識共有！」と始めたら、相手のタイピングが遅すぎてイライラする",
-      "term_en": "Pair Programming"
+      "term_en": "Pair Programming",
+      "sarcastic_notes": [
+        "「知識共有！」と言いながら、キーボードの奪い合い",
+        "相手のコーディングスタイルにイライラする時間",
+        "二人で一つのキーボード。密着度が高い"
+      ]
     },
     {
       "id": "0f9cfd86-2e74-4225-9cfa-2035c280ed57",
@@ -1982,8 +2015,12 @@
         "開発手法"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「品質向上！」と言いつつ、細かすぎる指摘で1行のPRに20コメント付く",
-      "term_en": "Code Review"
+      "term_en": "Code Review",
+      "sarcastic_notes": [
+        "「品質向上！」と言いながら、「LGTM」だけのレビュー",
+        "指摘が多すぎて、作者が凹む繊細な作業",
+        "他人のコードをチェック。お互いを見つめ合う"
+      ]
     },
     {
       "id": "af26f2b7-889d-42c4-a655-b627fed88876",
@@ -1999,8 +2036,12 @@
         "協業"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「承認待ち」と放置されて、3日後に見たらコンフリクトしてる",
-      "term_en": "Pull Request"
+      "term_en": "Pull Request",
+      "sarcastic_notes": [
+        "「小さく出して！」と言いながら、1000行のPRが飛んでくる",
+        "マージされるまでの待ち時間で別のことを始めて、コンフリクト",
+        "「マージしてください」というお願い。受け入れてほしい"
+      ]
     },
     {
       "id": "0f6c2725-e4cd-42a5-894c-749eb1823260",
@@ -2017,8 +2058,12 @@
         "記法"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「簡単！」と書いたら、プレビューとレンダリング結果が違って発狂",
-      "term_en": "Markdown"
+      "term_en": "Markdown",
+      "sarcastic_notes": [
+        "「簡単に書ける！」と言いながら、方言が多すぎる問題",
+        "表を書こうとして、素直にHTML使う人",
+        "軽量マークアップ。シンプルな関係"
+      ]
     },
     {
       "id": "335db240-a850-4009-ab59-837cc57e225f",
@@ -2035,8 +2080,12 @@
         "シリアライゼーション"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「読みやすい！」と言うが、インデントが1つずれてパースエラー地獄",
-      "term_en": "YAML"
+      "term_en": "YAML",
+      "sarcastic_notes": [
+        "インデントがズレただけでパースエラー。神経質すぎる",
+        "JSONより読みやすいと言いながら、複雑になると地獄",
+        "Yet Another Markup Language。また別のマークアップ"
+      ]
     },
     {
       "id": "cd1eae45-d469-4f00-8a3b-a1a3a577073f",
@@ -2053,8 +2102,12 @@
         "交換"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「自己記述的！」と言うが、閉じタグの山で何がなんだか分からない",
-      "term_en": "XML"
+      "term_en": "XML",
+      "sarcastic_notes": [
+        "「まだ使ってるの？」と言われながら、SOAPで現役",
+        "閉じタグを探して迷子になる日常",
+        "タグで囲む。形式にこだわる関係"
+      ]
     },
     {
       "id": "63eb27e5-dccc-4796-9b9c-6d0d943e9736",
@@ -2071,8 +2124,12 @@
         "シンプル"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「シンプル！」と使ったら、データにカンマが入ってて全部ずれた",
-      "term_en": "CSV"
+      "term_en": "CSV",
+      "sarcastic_notes": [
+        "「シンプル！」と言いながら、カンマを含む値で崩壊",
+        "Excelで開いた瞬間、文字化けする伝統芸",
+        "Comma-Separated Values。カンマで区切る"
+      ]
     },
     {
       "id": "d65a5bdc-3873-4fa8-b82b-61c74fdc3b85",
@@ -2089,8 +2146,12 @@
         "検索"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "Stack Overflowからコピペした正規表現、なぜ動くか誰も理解していない",
-      "term_en": "Regular Expression"
+      "term_en": "Regular Expression",
+      "sarcastic_notes": [
+        "書いた本人も1週間後には読めなくなる魔法の呪文",
+        "「これで動く」と「なぜ動くか分かる」は別問題",
+        "パターンマッチング。条件に合う相手を探す"
+      ]
     },
     {
       "id": "80ad22a2-8234-4b5e-92ae-45d795c0babe",
@@ -2106,8 +2167,12 @@
         "ツール"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「すぐ直る！」と思ったバグが、3日後も原因不明のまま",
-      "term_en": "Debugging"
+      "term_en": "Debugging",
+      "sarcastic_notes": [
+        "「print文デバッグ」が最強という現実",
+        "バグを直したら、別のバグが生まれる無限ループ",
+        "虫を取り除く。問題を解決"
+      ]
     },
     {
       "id": "d3608bbf-b4a6-4297-a922-120fa15c3863",
@@ -2123,8 +2188,12 @@
         "測定"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「ボトルネック特定！」と測定したら、想定外の箇所が遅くて絶望",
-      "term_en": "Profiling"
+      "term_en": "Profiling",
+      "sarcastic_notes": [
+        "「ボトルネック特定！」と言いながら、結果の見方が分からない",
+        "最適化したいところと、実際のボトルネックが違う悲劇",
+        "パフォーマンスを測定。どこが遅いか調べる"
+      ]
     },
     {
       "id": "cb500b6d-9079-414b-b244-245501092414",
@@ -2140,8 +2209,12 @@
         "パフォーマンス"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「なんかメモリ増えてる」と気づいた時には、サーバーがOOM Killerで死んでた",
-      "term_en": "Memory Leak"
+      "term_en": "Memory Leak",
+      "sarcastic_notes": [
+        "「ガベージコレクションあるから大丈夫」という油断",
+        "リークを見つけた時には、本番で障害が起きてる",
+        "メモリが漏れ続ける。止まらない流出"
+      ]
     },
     {
       "id": "7c99c85d-2ae2-498d-b949-63ae29ca52b1",
@@ -2157,8 +2230,12 @@
         "問題"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「本番で詰まった！」→ログ見たらデッドロックで、再起動するしかない",
-      "term_en": "Deadlock"
+      "term_en": "Deadlock",
+      "sarcastic_notes": [
+        "お互いがお互いを待つ。会議で「誰か意見ありますか？」状態",
+        "原因を調べようとしたら、ログ出力もデッドロック",
+        "お互いが相手を待ち続ける。倦怠期の夫婦"
+      ]
     },
     {
       "id": "42f43aa8-b8a0-4089-8c47-bb1cec798562",
@@ -2174,8 +2251,12 @@
         "問題"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「たまに再現する」バグ、実は競合状態で誰もデバッグできない",
-      "term_en": "Race Condition"
+      "term_en": "Race Condition",
+      "sarcastic_notes": [
+        "再現しないバグの9割はこれ",
+        "「動いてるから大丈夫」が最も危険な状態",
+        "同時にアクセスすると何が起きるか分からない。三角関係"
+      ]
     },
     {
       "id": "6305c4ec-2ae8-4237-b31f-90613196f2bd",
@@ -2191,8 +2272,12 @@
         "制御"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「排他制御！」と実装したら、ロックの取得待ちでシステムが遅くなった",
-      "term_en": "Mutual Exclusion"
+      "term_en": "Mutual Exclusion",
+      "sarcastic_notes": [
+        "「ロックすれば安全！」と言いながら、デッドロックを生む",
+        "粒度を間違えると、パフォーマンスが死ぬ",
+        "「今夜は俺だけのもの」という独占欲の実装"
+      ]
     },
     {
       "id": "5a308ef8-eae0-4622-aa09-c1039c05e0ec",
@@ -2209,8 +2294,12 @@
         "パフォーマンス"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「効率的！」と使ったら、コールバック地獄で心が折れた",
-      "term_en": "Asynchronous I/O"
+      "term_en": "Asynchronous I/O",
+      "sarcastic_notes": [
+        "「ブロッキングしない！」と言いながら、コールバック地獄へ",
+        "イベントループの理解で1週間溶ける",
+        "待たずに次へ。並行して複数相手にする"
+      ]
     },
     {
       "id": "cda61989-f14c-44e9-a3e1-9a3be2e1b29d",
@@ -2226,8 +2315,12 @@
         "言語機能"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「自動管理！」と安心したら、GCで処理が止まってユーザーが怒ってる",
-      "term_en": "Garbage Collection"
+      "term_en": "Garbage Collection",
+      "sarcastic_notes": [
+        "「自動で解放！」と言いながら、GCポーズで性能が死ぬ",
+        "チューニングが難しすぎて、結局デフォルトのまま",
+        "不要になったものを回収。片付け上手"
+      ]
     },
     {
       "id": "3f1409da-8c31-47f5-806b-388dcc309650",
@@ -2243,8 +2336,12 @@
         "オブジェクト指向"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「グローバル変数はダメ！」と言いながら、結局シングルトンでグローバル状態",
-      "term_en": "Singleton"
+      "term_en": "Singleton",
+      "sarcastic_notes": [
+        "「グローバル変数はダメ」と言いながら量産されるパターン",
+        "テストのたびに状態リセットで発狂する",
+        "インスタンスは生涯一つだけ。一途な愛の形"
+      ]
     },
     {
       "id": "0f17f4a9-28eb-4307-846c-f89ec62f0d0b",
@@ -2261,8 +2358,12 @@
         "オブジェクト指向"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「拡張性！」と作ったら、if文が50個並んで誰もメンテしたくない",
-      "term_en": "Factory Pattern"
+      "term_en": "Factory Pattern",
+      "sarcastic_notes": [
+        "「new禁止！」と言いながら、Factoryをnewしてる矛盾",
+        "AbstractFactoryを作った瞬間、設計がよく分からなくなる",
+        "オブジェクトを生成する工場。量産体制"
+      ]
     },
     {
       "id": "e28e8e1a-f85c-4bf1-9c06-99037704bcb3",
@@ -2279,8 +2380,12 @@
         "通知"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「疎結合！」と実装したら、通知が連鎖して何が起きてるか分からない",
-      "term_en": "Observer Pattern"
+      "term_en": "Observer Pattern",
+      "sarcastic_notes": [
+        "「疎結合！」と言いながら、誰が購読してるか追えない",
+        "イベントの発火順序で予期せぬバグを生む",
+        "変化を監視して反応。見てるだけで満足する人向け"
+      ]
     },
     {
       "id": "b8dbf966-d1da-4c6f-8856-4ceb5f4f0b5e",
@@ -2297,8 +2402,12 @@
         "切り替え"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「柔軟！」と実装したら、ストラテジークラスが20個になって管理不能",
-      "term_en": "Strategy Pattern"
+      "term_en": "Strategy Pattern",
+      "sarcastic_notes": [
+        "「アルゴリズムを交換可能に！」と言いながら、結局1つしか使わない",
+        "インターフェースだけ増えて、実装は1つという虚しさ",
+        "戦略を切り替える。状況に応じて変える"
+      ]
     },
     {
       "id": "ebaf8bc6-ce91-4541-a0f8-f84a9a569936",
@@ -2315,8 +2424,12 @@
         "テスト"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「テストしやすい！」と実装したら、DIコンテナの設定で1日溶けた",
-      "term_en": "Dependency Injection"
+      "term_en": "Dependency Injection",
+      "sarcastic_notes": [
+        "「テスタビリティ！」と言いながら、DIコンテナ設定で地獄",
+        "コンストラクタの引数が10個超える本末転倒",
+        "「インジェクション」という響きだけで興奮する人種がいる"
+      ]
     },
     {
       "id": "d6f278a0-c243-4c1d-862b-ada29ae45073",
@@ -2333,8 +2446,12 @@
         "契約"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「抽象化！」と作ったら、インターフェースが10階層になって誰も追えない",
-      "term_en": "Interface"
+      "term_en": "Interface",
+      "sarcastic_notes": [
+        "「契約を定義！」と言いながら、実装クラスが1つだけ",
+        "インターフェース爆発で、どれがどれか分からなくなる",
+        "外部との接点。お互いの約束事"
+      ]
     },
     {
       "id": "445d1653-203a-4bb3-85e5-7166d8f0bf5e",
@@ -2351,8 +2468,12 @@
         "抽象化"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「柔軟性！」と継承しまくったら、どのメソッドが呼ばれてるか分からない",
-      "term_en": "Polymorphism"
+      "term_en": "Polymorphism",
+      "sarcastic_notes": [
+        "「多態性！」と説明しても、何のことか伝わらない",
+        "オーバーライドとオーバーロードの違いで混乱する人続出",
+        "同じインターフェースで違う振る舞い。器用な人だ"
+      ]
     },
     {
       "id": "d3cc1995-1ff4-44ce-a42f-6d6f56c76229",
@@ -2369,8 +2490,12 @@
         "拡張"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「コード再利用！」と継承したら、親クラス変更で全部壊れた",
-      "term_en": "Inheritance"
+      "term_en": "Inheritance",
+      "sarcastic_notes": [
+        "「コードの再利用！」と言いながら、深すぎる継承階層で地獄",
+        "「継承より委譲」を知った瞬間の、今までは何だったんだ感",
+        "親から受け継いだものを子に渡す。遺伝子レベルの話"
+      ]
     },
     {
       "id": "8fb78eab-69a4-45d7-9d40-be305d1461c9",
@@ -2387,8 +2512,12 @@
         "保護"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「隠蔽！」と設計したら、privateフィールドにアクセスできなくてテストが書けない",
-      "term_en": "Encapsulation"
+      "term_en": "Encapsulation",
+      "sarcastic_notes": [
+        "「情報隠蔽！」と言いながら、getter/setterで全公開",
+        "privateにした瞬間、リフレクションでアクセスしてくる人がいる",
+        "大事なものは隠す。でも見たくなるのが人情"
+      ]
     },
     {
       "id": "8468f642-1f8a-4cec-9294-a566a8b26091",
@@ -2405,8 +2534,12 @@
         "継承"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「抽象化！」と作ったら、抽象クラスが増殖して階層が深すぎる",
-      "term_en": "Abstract Class"
+      "term_en": "Abstract Class",
+      "sarcastic_notes": [
+        "「共通処理を抽出！」と言いながら、何を抽象化するか迷子",
+        "インターフェースとの使い分けで毎回議論になる",
+        "具体的な実装を持たない。概念的な関係"
+      ]
     },
     {
       "id": "b5cc2c7c-4225-4660-a0e0-7f2beb526c52",
@@ -2423,8 +2556,12 @@
         "型安全"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「型安全！」と使ったら、ジェネリクスの型推論エラーで3時間悩んだ",
-      "term_en": "Generics"
+      "term_en": "Generics",
+      "sarcastic_notes": [
+        "「型安全で再利用！」と言いながら、`<T extends Comparable<? super T>>`で発狂",
+        "ワイルドカードの使い分けを完全に理解してる人、いない説",
+        "型を抽象化。いろんな相手に対応"
+      ]
     },
     {
       "id": "130813c6-e48c-4f97-9d4c-757e3b1fca22",
@@ -2440,8 +2577,12 @@
         "制御構造"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「エラーハンドリング！」と書いたら、catch で console.log するだけの虚無",
-      "term_en": "Exception Handling"
+      "term_en": "Exception Handling",
+      "sarcastic_notes": [
+        "「catchしたら何かしろ」と言いながら、空のcatchブロック",
+        "検査例外 vs 非検査例外の議論、答えが出ない",
+        "異常事態に対処。トラブル対応力"
+      ]
     },
     {
       "id": "72e25b16-ab3b-46c6-a855-24084db5ca1f",
@@ -2458,8 +2599,12 @@
         "関数型"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「簡潔！」と使いまくったら、ワンライナーが複雑すぎて誰も読めない",
-      "term_en": "Lambda Expression"
+      "term_en": "Lambda Expression",
+      "sarcastic_notes": [
+        "「簡潔に書ける！」と言いながら、読みにくいワンライナーを生成",
+        "デバッグしにくい問題は、誰も解決していない",
+        "名前のない一夜限りの関数。その場限りの関係"
+      ]
     },
     {
       "id": "91973d74-84d9-4e3f-8aee-1d9277287541",
@@ -2476,8 +2621,12 @@
         "状態"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「便利！」と使ったら、メモリリークの原因になってた",
-      "term_en": "Closure"
+      "term_en": "Closure",
+      "sarcastic_notes": [
+        "「外部変数を参照！」と言いながら、メモリリークの温床",
+        "クロージャの中のthisが何を指すか、毎回調べる",
+        "外部変数を閉じ込めて離さない。束縛系の関係"
+      ]
     },
     {
       "id": "d6e7ef23-cdd5-40b1-93b6-5dee72e2531c",
@@ -2494,8 +2643,12 @@
         "安全性"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「不変！」と徹底したら、毎回オブジェクトコピーでメモリが爆発した",
-      "term_en": "Immutable"
+      "term_en": "Immutable",
+      "sarcastic_notes": [
+        "「不変で安全！」と言いながら、コピーコストで性能が死ぬ",
+        "どこまで不変にするか、チームで揉める",
+        "変化しない。安定した関係"
+      ]
     },
     {
       "id": "35b39f50-ff37-40e8-a059-62b9a3fb844b",
@@ -2512,8 +2665,12 @@
         "純粋"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「副作用なし！」と書いたら、現実世界のI/Oで詰んだ",
-      "term_en": "Functional Programming"
+      "term_en": "Functional Programming",
+      "sarcastic_notes": [
+        "「副作用なし！」と言いながら、結局I/Oで副作用",
+        "モナドを理解した気になって、説明できない人続出",
+        "関数を中心にした考え方。純粋な関係"
+      ]
     },
     {
       "id": "5482ec93-b906-4605-a2f7-898dcaadd2c2",
@@ -2530,8 +2687,12 @@
         "変換"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「宣言的！」と使ったら、reduceがネストして何してるか分からない",
-      "term_en": "Map/Reduce"
+      "term_en": "Map/Reduce",
+      "sarcastic_notes": [
+        "「宣言的！」と言いながら、forループの方が読みやすい説",
+        "reduceの初期値を忘れて、undefined地獄",
+        "変換と集約。複数を一つにまとめる"
+      ]
     },
     {
       "id": "9a0f5b2d-0d0d-48c9-8d78-b102506348a7",
@@ -2548,8 +2709,12 @@
         "オブジェクト"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「柔軟！」と言うが、プロトタイプチェーンを追うのに1時間かかった",
-      "term_en": "Prototype"
+      "term_en": "Prototype",
+      "sarcastic_notes": [
+        "「クラスじゃなくてプロトタイプ！」というJSの闇",
+        "__proto__と[[Prototype]]の違いで混乱する入門者",
+        "原型から派生。親子関係"
+      ]
     },
     {
       "id": "24f24d81-f4f5-4b8e-8497-fa05be27ba46",
@@ -2566,8 +2731,12 @@
         "null"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「NullPointerException撲滅！」と喜んだら、Option型のunwrapで結局落ちた",
-      "term_en": "Null Safety"
+      "term_en": "Null Safety",
+      "sarcastic_notes": [
+        "「NullPointerException撲滅！」と言いながら、`!!`で強制",
+        "Optionalを使いこなすのに、1ヶ月はかかる",
+        "Nullを許さない。曖昧な関係は認めない"
+      ]
     },
     {
       "id": "272145be-945b-4ec0-a794-0442da49d7de",
@@ -2584,8 +2753,12 @@
         "推論"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「型書かなくていい！」と喜んだら、推論された型が any で意味なかった",
-      "term_en": "Type Inference"
+      "term_en": "Type Inference",
+      "sarcastic_notes": [
+        "「型を書かなくていい！」と言いながら、推論結果が意外すぎる",
+        "varを使いすぎて、何の型か分からなくなる",
+        "型を自動で判断。察してくれる関係"
+      ]
     },
     {
       "id": "343e0908-e349-42f2-a6d3-b07d39340b76",
@@ -2602,8 +2775,12 @@
         "依存関係"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「互換性！」と信じてアップデートしたら、MINOR版で破壊的変更が入ってた",
-      "term_en": "Semantic Versioning"
+      "term_en": "Semantic Versioning",
+      "sarcastic_notes": [
+        "「破壊的変更はメジャー！」と言いながら、0.x.yで逃げ続ける",
+        "「パッチだから大丈夫」と思ったら、破壊的変更だった",
+        "バージョン番号に意味を持たせる。段階を踏んだ関係"
+      ]
     },
     {
       "id": "03fa65ed-43cd-458a-acb2-5f9a8e1bc2e3",
@@ -2620,8 +2797,12 @@
         "キャッシュ"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「高速化！」と設定したら、キャッシュが残りすぎてユーザーが古い画面を見てる",
-      "term_en": "Browser Cache"
+      "term_en": "Browser Cache",
+      "sarcastic_notes": [
+        "「キャッシュで高速化！」と言いながら、更新が反映されない地獄",
+        "「キャッシュクリアしてください」という、サポート業務の基本",
+        "よく使うデータを手元に保存。すぐに取り出せる"
+      ]
     },
     {
       "id": "de357ac9-4334-474e-aa4f-b6d5d1b65a27",
@@ -2638,8 +2819,12 @@
         "ストレージ"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「便利！」と使ったら、GDPR対応で同意バナーが画面の半分を占めた",
-      "term_en": "Cookie"
+      "term_en": "Cookie",
+      "sarcastic_notes": [
+        "「同意しますか？」に「全部拒否」を選んでも追跡される現実",
+        "GDPR対応で同意バナー地獄。UXを破壊して法務を守る",
+        "一度味わうと追跡してくる。ストーカー気質のデータ"
+      ]
     },
     {
       "id": "2f2f0e08-cf84-4aa0-9266-c27c62dbc61e",
@@ -2656,8 +2841,12 @@
         "永続化"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「簡単！」と使ったら、ユーザーがプライベートモードで全部消えた",
-      "term_en": "Local Storage"
+      "term_en": "Local Storage",
+      "sarcastic_notes": [
+        "「永続化できる！」と言いながら、ユーザーが消せる現実",
+        "5MBの制限に引っかかって、設計変更を余儀なくされる",
+        "ブラウザに長期保存。忘れられない関係"
+      ]
     },
     {
       "id": "85feab41-e225-4fac-b5b5-babda586d9f0",
@@ -2674,8 +2863,12 @@
         "一時"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「一時的！」と使ったら、ユーザーがタブ閉じて「データ消えた！」とクレーム",
-      "term_en": "Session Storage"
+      "term_en": "Session Storage",
+      "sarcastic_notes": [
+        "「タブを閉じたら消える！」という仕様を忘れて、データロスト",
+        "複数タブで共有できないことに気づいた時の絶望",
+        "ブラウザを閉じたら忘れる。一夜限りの関係"
+      ]
     },
     {
       "id": "fed9dd95-0edd-4f31-b7dc-136a03bffd84",
@@ -2692,8 +2885,12 @@
         "バックグラウンド"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「オフライン対応！」と実装したら、キャッシュ戦略で脳が爆発した",
-      "term_en": "Service Worker"
+      "term_en": "Service Worker",
+      "sarcastic_notes": [
+        "「オフライン対応！」と言いながら、キャッシュ管理で地獄",
+        "更新が反映されなくて「Service Workerのせいでは？」と疑う日々",
+        "バックグラウンドで黙々と奉仕し続ける存在"
+      ]
     },
     {
       "id": "d3d0219e-b1bc-41cc-ac51-6d6e328f5864",
@@ -2710,8 +2907,12 @@
         "読み込み"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「高速化！」と実装したら、スクロールの度にチラつく最悪UX",
-      "term_en": "Lazy Loading"
+      "term_en": "Lazy Loading",
+      "sarcastic_notes": [
+        "「必要な時に読み込む！」と言いながら、ちらつきが気になる",
+        "遅延読み込みしすぎて、ユーザー体験が悪化するパターン",
+        "必要になるまで読み込まない。焦らしプレイ"
+      ]
     },
     {
       "id": "52f2a0ac-e045-4ee5-b15e-f4d26276d5cb",
@@ -2728,8 +2929,12 @@
         "最適化"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「API叩きすぎ防止！」と実装したら、遅延が長すぎてユーザーが困惑してる",
-      "term_en": "Debounce"
+      "term_en": "Debounce",
+      "sarcastic_notes": [
+        "「連続入力を抑制！」と言いながら、待ち時間の調整で悩む",
+        "スロットリングとの違いを説明できる人、意外と少ない",
+        "連続した入力を間引く。じらして最後だけ"
+      ]
     },
     {
       "id": "1ee15d7d-318f-4c6f-806a-39ef0ea7699e",
@@ -2746,8 +2951,12 @@
         "最適化"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「実行回数削減！」と実装したら、スクロールがカクついて最悪",
-      "term_en": "Throttling"
+      "term_en": "Throttling",
+      "sarcastic_notes": [
+        "「一定間隔で実行！」と言いながら、最適な間隔が分からない",
+        "デバウンスとの使い分けで毎回調べる",
+        "頻度を制限。ペースを守る"
+      ]
     },
     {
       "id": "60eac415-a988-49ae-afca-e4263885a69b",
@@ -2763,8 +2972,12 @@
         "SEO"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「SEO対策！」と実装したら、サーバー負荷でレスポンスタイムが3倍になった",
-      "term_en": "SSR"
+      "term_en": "SSR",
+      "sarcastic_notes": [
+        "「SEOに強い！」と言いながら、初期表示が遅い矛盾",
+        "ハイドレーションエラーで地獄を見る開発者多数",
+        "Server-Side Rendering。サーバー側で先にやっておく"
+      ]
     },
     {
       "id": "88d15a5e-fba1-41d5-90af-4bb1bbe11b97",
@@ -2780,8 +2993,12 @@
         "パフォーマンス"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「爆速！」と作ったら、記事が1000個になってビルドに1時間かかってる",
-      "term_en": "SSG"
+      "term_en": "SSG",
+      "sarcastic_notes": [
+        "「ビルド時に生成！」と言いながら、コンテンツ更新でビルドし直し",
+        "ページ数が増えるとビルド時間が爆発する問題",
+        "Static Site Generation。事前に準備しておく"
+      ]
     },
     {
       "id": "772cd4be-6d6a-47f3-85c0-2cff01411ee9",
@@ -2797,8 +3014,12 @@
         "SPA"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「インタラクティブ！」と作ったら、初回ロードで5秒白い画面が出た",
-      "term_en": "CSR"
+      "term_en": "CSR",
+      "sarcastic_notes": [
+        "「クライアントで描画！」と言いながら、初期表示が真っ白",
+        "SEO対策のためにSSRを検討し始める本末転倒",
+        "Client-Side Rendering。クライアント側で仕上げる"
+      ]
     },
     {
       "id": "964fab63-95ea-4ea2-88ff-95a07d340e6c",
@@ -2814,8 +3035,12 @@
         "React"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「高速表示！」と思ったら、Hydration中はボタンが押せなくてユーザーが困惑",
-      "term_en": "Hydration"
+      "term_en": "Hydration",
+      "sarcastic_notes": [
+        "「サーバーで描画してクライアントで引き継ぐ！」という複雑な仕組み",
+        "ハイドレーションミスマッチで1日溶ける",
+        "乾いた状態に潤いを与える。水分補給"
+      ]
     },
     {
       "id": "b29aa80b-cb74-46d8-b65f-09843168ac1e",
@@ -2832,8 +3057,12 @@
         "カスタム要素"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「フレームワーク不要！」と作ったら、ブラウザ互換性で詰んだ",
-      "term_en": "Web Components"
+      "term_en": "Web Components",
+      "sarcastic_notes": [
+        "「フレームワーク不要！」と言いながら、普及しない現実",
+        "Shadow DOMの扱いで詰む開発者多数",
+        "再利用可能なコンポーネント。部品化"
+      ]
     },
     {
       "id": "618cf931-eab5-4fe5-bef7-7300aba7adea",
@@ -2850,8 +3079,12 @@
         "JavaScript"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「新機能使える！」と入れたら、バンドルサイズが2倍になった",
-      "term_en": "Polyfill"
+      "term_en": "Polyfill",
+      "sarcastic_notes": [
+        "「古いブラウザでも動く！」と言いながら、バンドルサイズが膨張",
+        "どこまでサポートするか、ビジネス判断と技術の狭間で悩む",
+        "足りない機能を補う。サポート役"
+      ]
     },
     {
       "id": "7500f862-9438-4d1c-85cb-1d2df35c15a2",
@@ -2868,8 +3101,12 @@
         "サイズ削減"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「削減！」と期待したら、副作用で全部残ってサイズ変わらず",
-      "term_en": "Tree Shaking"
+      "term_en": "Tree Shaking",
+      "sarcastic_notes": [
+        "「使わないコードを削除！」と言いながら、副作用で残る問題",
+        "本当に削除されてるか確認する方法、よく分からない",
+        "不要なものを振り落とす。身軽になる"
+      ]
     },
     {
       "id": "b5100111-e7e4-42f6-a6ac-802c858429fe",
@@ -2886,8 +3123,12 @@
         "読み込み"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「高速化！」と分割したら、チャンク数が100個になって管理できない",
-      "term_en": "Code Splitting"
+      "term_en": "Code Splitting",
+      "sarcastic_notes": [
+        "「必要な分だけ読み込む！」と言いながら、分割の粒度で悩む",
+        "チャンクが増えすぎて、リクエスト数が爆発するパターン",
+        "コードを分割。少しずつ出していく"
+      ]
     },
     {
       "id": "8ceaa959-bea7-4371-8d21-560d79a28be8",
@@ -2904,8 +3145,12 @@
         "ファイルサイズ"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「圧縮！」と本番にデプロイしたら、ソースマップ無くてデバッグできない",
-      "term_en": "Minify"
+      "term_en": "Minify",
+      "sarcastic_notes": [
+        "「ファイルサイズ削減！」と言いながら、デバッグが地獄",
+        "Source Mapを出し忘れて、本番のエラーが追えない",
+        "圧縮して小さくする。コンパクトに"
+      ]
     },
     {
       "id": "864bfcd6-c6d6-48a4-9bff-1469aa627557",
@@ -2922,8 +3167,12 @@
         "マッピング"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「デバッグ便利！」と思ったら、本番でソースマップ公開して情報漏洩",
-      "term_en": "Source Map"
+      "term_en": "Source Map",
+      "sarcastic_notes": [
+        "「元のコードにマッピング！」と言いながら、本番に出して焦る",
+        "Source Mapが壊れて、デバッグできない地獄",
+        "変換前と変換後を対応付ける。関係の履歴"
+      ]
     },
     {
       "id": "0053d418-a54e-4709-a790-c970c5a0a7b9",
@@ -2940,8 +3189,12 @@
         "ツール"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「最新構文！」と使ったら、トランスパイル後のコードが読めなさすぎて絶望",
-      "term_en": "Transpile"
+      "term_en": "Transpile",
+      "sarcastic_notes": [
+        "「新しい構文を古い形式に！」と言いながら、変換結果が膨張",
+        "Babelの設定地獄に陥る開発者多数",
+        "変換する。形を変えて対応"
+      ]
     },
     {
       "id": "14c2342f-4259-4626-9944-1e00e47d85eb",
@@ -2957,8 +3210,12 @@
         "効率化"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「便利！」と使ってたら、無限リロードループで開発が止まった",
-      "term_en": "Hot Reload"
+      "term_en": "Hot Reload",
+      "sarcastic_notes": [
+        "「変更が即反映！」と言いながら、たまに反映されなくて手動リロード",
+        "状態が保持されすぎて、新しいコードが動いてるか分からない",
+        "熱いうちに再読み込み。すぐに反応"
+      ]
     },
     {
       "id": "eb274e37-f412-4c00-91c5-e63b313650be",
@@ -2975,8 +3232,12 @@
         "セキュリティ"
       ],
       "created_at": "2025-11-24T08:00:00.000Z",
-      "sarcastic_note": "「安全！」と .env ファイルを作ったら、うっかり Git にコミットして炎上",
-      "term_en": "Environment Variables"
+      "term_en": "Environment Variables",
+      "sarcastic_notes": [
+        "「設定を外出し！」と言いながら、.envをコミットしてしまう人",
+        "本番と開発で値が違って、謎のバグを生む",
+        "環境ごとに変わる変数。状況に応じて変化"
+      ]
     }
   ],
   "categories": [

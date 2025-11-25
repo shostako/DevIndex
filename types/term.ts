@@ -11,7 +11,7 @@ export interface Term {
   code_example?: string;     // コード例
   tags: string[];            // タグ配列
   created_at: string;        // ISO 8601形式
-  sarcastic_note?: string;   // Monday風の皮肉コメント
+  sarcastic_notes?: string[];   // Monday風の皮肉コメント（複数）
 }
 
 // カテゴリー

@@ -40,6 +40,10 @@ REpresentational State Transfer（REST）は、Webサービスを設計するた
   .then(data => console.log(data))`,
     tags: ['API', 'HTTP', 'アーキテクチャ'],
     created_at: new Date().toISOString(),
+    sarcastic_notes: [
+      '「RESTful」を自称するAPIの9割は、RESTの制約を何一つ守っていない。でも誰も気にしない',
+      'ドキュメントは3年前から更新されていない',
+    ],
   },
   {
     id: crypto.randomUUID(),

@@ -141,18 +141,22 @@ export function TermDetail({ term, progress, onClose }: TermDetailProps) {
               </div>
             )}
 
-            {/* Monday's Note（皮肉コメント） */}
-            {term.sarcastic_note && (
+            {/* Monday's Notes（皮肉コメント） */}
+            {term.sarcastic_notes && term.sarcastic_notes.length > 0 && (
               <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-pink-900/30 border-l-4 border-purple-500 rounded-r-lg p-4">
                 <div className="flex items-start gap-3">
                   <div className="text-2xl flex-shrink-0">😏</div>
                   <div className="flex-1">
-                    <p className="text-sm font-semibold text-purple-700 dark:text-purple-300 mb-1">
-                      Monday&apos;s Note
+                    <p className="text-sm font-semibold text-purple-700 dark:text-purple-300 mb-2">
+                      Monday&apos;s Notes
                     </p>
-                    <p className="text-gray-700 dark:text-gray-300 italic leading-relaxed">
-                      {term.sarcastic_note}
-                    </p>
+                    <ul className="space-y-2">
+                      {term.sarcastic_notes.map((note, index) => (
+                        <li key={index} className="text-gray-700 dark:text-gray-300 italic leading-relaxed">
+                          • {note}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>
