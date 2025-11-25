@@ -21,8 +21,8 @@ export function Header() {
           {/* ロゴ */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <span className="text-2xl">📚</span>
-              <span className="text-xl font-bold text-gray-900 dark:text-white">DevIndex</span>
+              <span className="text-2xl">😈</span>
+              <span className="text-xl font-bold text-gray-900 dark:text-white">悪魔のIT辞典</span>
             </Link>
           </div>
 

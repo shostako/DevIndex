@@ -3,8 +3,8 @@ import './globals.css'
 import { ThemeProvider } from '@/components/providers/ThemeProvider'
 
 export const metadata: Metadata = {
-  title: 'DevIndex - エンジニア用語学習アプリ',
-  description: '技術用語を効率的に学習し、長期記憶に定着させる',
+  title: '悪魔のIT辞典 - 毒舌エンジニア用語集',
+  description: '技術用語を皮肉と風刺で学ぶ、エンジニアのための悪魔の辞典',
   manifest: '/manifest.json',
 }
 
