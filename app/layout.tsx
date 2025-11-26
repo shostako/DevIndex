@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { ThemeProvider } from '@/components/providers/ThemeProvider'
+import { DataInitializer } from '@/components/providers/DataInitializer'
 
 export const metadata: Metadata = {
   title: '悪魔のIT辞典 - 毒舌エンジニア用語集',
@@ -16,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="ja" suppressHydrationWarning>
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <DataInitializer>{children}</DataInitializer>
+        </ThemeProvider>
       </body>
     </html>
   )

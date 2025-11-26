@@ -27,6 +27,17 @@ function getRandomElements<T>(array: T[], count: number): T[] {
   return shuffled.slice(0, count);
 }
 
+/**
+ * 説明から答えが推測できる部分を除外
+ * 例: "Domain-Driven Designの略。ドメイン駆動設計" → "ドメイン駆動設計"
+ * 例: "HyperText Markup Languageの略。Webページの構造を定義" → "Webページの構造を定義"
+ */
+function sanitizeDescForQuiz(desc: string): string {
+  // "XXXの略。" パターンを除外（英語の正式名称部分）
+  const sanitized = desc.replace(/^[A-Za-z0-9\s\-()]+の略[。、]?\s*/, '').trim();
+  return sanitized || desc; // フォールバック
+}
+
 // ----------------
 // クイズ生成
 // ----------------
@@ -96,9 +107,12 @@ function generateSingleQuestion(
   allTerms: Term[]
 ): QuizQuestion {
   // 問題タイプをランダム選択
-  // アルファベット主体の用語（CSS、HTTP等）は reading-to-term を除外
+  // reading-to-term を除外する条件:
+  // 1. アルファベット主体の用語（CSS、HTTP等）
+  // 2. 読み仮名と用語名が同じ（シングルトン、デバッグ等）
   const isAlphabetTerm = /^[A-Za-z0-9\-_.\/]+$/.test(correctTerm.term);
-  const questionTypes: QuestionType[] = isAlphabetTerm
+  const isTermEqualsReading = correctTerm.term === correctTerm.reading;
+  const questionTypes: QuestionType[] = (isAlphabetTerm || isTermEqualsReading)
     ? ['term-to-desc', 'desc-to-term']
     : ['term-to-desc', 'desc-to-term', 'reading-to-term'];
   const questionType = questionTypes[Math.floor(Math.random() * questionTypes.length)];
@@ -110,7 +124,7 @@ function generateSingleQuestion(
       questionText = `「${correctTerm.term}」の説明として正しいものは？`;
       break;
     case 'desc-to-term':
-      questionText = `「${correctTerm.short_desc}」に該当する用語は？`;
+      questionText = `「${sanitizeDescForQuiz(correctTerm.short_desc)}」に該当する用語は？`;
       break;
     case 'reading-to-term':
       questionText = `「${correctTerm.reading}」の用語名は？`;
