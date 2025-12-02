@@ -13,7 +13,7 @@ export function SearchPrecisionControl() {
 
   return (
     <div className="flex items-center gap-2">
-      <label htmlFor="precision-select" className="hidden sm:inline text-sm font-medium text-gray-700 dark:text-gray-300">
+      <label htmlFor="precision-select" className="hidden md:inline text-sm font-medium text-gray-700 dark:text-gray-300">
         精度:
       </label>
       <select
