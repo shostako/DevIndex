@@ -1,7 +1,10 @@
 'use client';
 
+import { useState } from 'react';
 import { Header } from '@/components/layout/Header';
 import { Sidebar } from '@/components/layout/Sidebar';
+import { BottomSheet } from '@/components/layout/BottomSheet';
+import { FilterContent } from '@/components/layout/FilterContent';
 import { ProgressBar } from '@/components/layout/ProgressBar';
 import { SearchBar } from '@/components/dictionary/SearchBar';
 import { TermList } from '@/components/dictionary/TermList';
@@ -13,6 +16,8 @@ import { useTermStore } from '@/lib/store';
 import { useProgressStore } from '@/lib/store';
 
 export default function Home() {
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+
   const {
     filteredTerms,
     categories,
@@ -43,11 +48,11 @@ export default function Home() {
         masteredCount={stats.masteredTerms}
         totalCount={stats.totalTerms}
         reviewDueToday={stats.reviewDueToday}
-        streakDays={0} // Phase 3で実装
+        streakDays={0}
       />
 
       <div className="flex">
-        {/* サイドバー */}
+        {/* サイドバー (デスクトップのみ) */}
         <Sidebar
           categories={categories}
           selectedCategory={selectedCategory}
@@ -66,6 +71,17 @@ export default function Home() {
                 />
               </div>
               <div className="flex gap-2 justify-end">
+                {/* フィルタボタン (モバイルのみ) */}
+                <button
+                  onClick={() => setIsFilterOpen(true)}
+                  className="md:hidden px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center gap-1.5"
+                >
+                  <span>🔍</span>
+                  <span>フィルタ</span>
+                  {selectedCategory && (
+                    <span className="w-2 h-2 bg-blue-500 rounded-full" />
+                  )}
+                </button>
                 <SearchPrecisionControl />
                 <SortControl />
                 <ViewToggle />
@@ -88,6 +104,20 @@ export default function Home() {
           </div>
         </main>
       </div>
+
+      {/* モバイル用ボトムシート */}
+      <BottomSheet
+        isOpen={isFilterOpen}
+        onClose={() => setIsFilterOpen(false)}
+        title="フィルタ"
+      >
+        <FilterContent
+          categories={categories}
+          selectedCategory={selectedCategory}
+          onCategoryChange={filterByCategory}
+          onClose={() => setIsFilterOpen(false)}
+        />
+      </BottomSheet>
 
       {/* 用語詳細モーダル */}
       {selectedTerm && (

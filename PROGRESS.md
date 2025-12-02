@@ -17,7 +17,11 @@
   - Headerハンバーガーメニュー（md未満でドロワー表示）
   - TermTableモバイル対応（md未満で簡易リスト表示）
   - QuizCard/ReviewCardレスポンシブ化（パディング・高さ・フォントサイズ）
-  - page.txsコントロール折り返し対応
+  - page.tsxコントロール折り返し対応
+  - **Sidebarボトムシート化**（モバイルで下からスライドイン）
+    - FilterContent.tsx: 共通フィルタコンテンツ
+    - BottomSheet.tsx: 汎用ボトムシートコンポーネント
+    - Sidebar.tsx: デスクトップ専用に簡素化
 
 ## 未完了・保留
 - [ ] 初回ユーザー向けのオンボーディング画面
