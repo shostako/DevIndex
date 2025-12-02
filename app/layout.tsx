@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import { ThemeProvider } from '@/components/providers/ThemeProvider'
 import { DataInitializer } from '@/components/providers/DataInitializer'
@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   title: '悪魔のIT辞典 - 毒舌エンジニア用語集',
   description: '技術用語を皮肉と風刺で学ぶ、エンジニアのための悪魔の辞典',
   manifest: '/manifest.json',
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
 }
 
 export default function RootLayout({

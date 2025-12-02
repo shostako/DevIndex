@@ -8,7 +8,7 @@ interface QuizCardProps {
   question: QuizQuestion;
   questionNumber: number;
   totalQuestions: number;
-  term: Term; // 正解の用語（解説表示用）
+  term: Term;
   onAnswer: (answerIndex: number) => void;
   onNext: () => void;
 }
@@ -25,19 +25,17 @@ export default function QuizCard({
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const handleChoiceClick = (index: number) => {
-    if (isFlipped) return; // 既に回答済みなら無視
+    if (isFlipped) return;
 
     setSelectedIndex(index);
     onAnswer(index);
 
-    // カードをフリップ
     setTimeout(() => {
       setIsFlipped(true);
     }, 300);
   };
 
   const handleNext = () => {
-    // リセットして次の問題へ
     setIsFlipped(false);
     setSelectedIndex(null);
     onNext();
@@ -50,10 +48,10 @@ export default function QuizCard({
       <div className={`quiz-card ${isFlipped ? 'flipped' : ''}`}>
         {/* 表面: 問題と選択肢 */}
         <div className="card-face card-front">
-          <div className="p-8">
+          <div className="p-4 sm:p-6 md:p-8">
             {/* ヘッダー: 進捗 */}
-            <div className="mb-6 text-center">
-              <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+            <div className="mb-4 sm:mb-6 text-center">
+              <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-2">
                 問題 {questionNumber} / {totalQuestions}
               </div>
               <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
@@ -65,30 +63,30 @@ export default function QuizCard({
             </div>
 
             {/* 問題文 */}
-            <div className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white text-center">
+            <div className="mb-6 sm:mb-8">
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white text-center">
                 {question.question_text}
               </h2>
             </div>
 
             {/* 選択肢 */}
-            <div className="space-y-3">
+            <div className="space-y-2 sm:space-y-3">
               {question.choices.map((choice, index) => (
                 <button
                   key={index}
                   onClick={() => handleChoiceClick(index)}
                   disabled={selectedIndex !== null}
-                  className={`w-full p-4 text-left border-2 rounded-lg transition-all ${
+                  className={`w-full p-3 sm:p-4 text-left border-2 rounded-lg transition-all ${
                     selectedIndex === index
                       ? 'border-blue-600 bg-blue-50 dark:bg-blue-900/30'
                       : 'border-gray-300 dark:border-gray-600 hover:border-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700'
                   } ${selectedIndex !== null ? 'cursor-not-allowed opacity-60' : 'cursor-pointer'}`}
                 >
                   <div className="flex items-center">
-                    <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-full text-sm font-medium mr-3 text-gray-900 dark:text-white">
+                    <span className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-full text-xs sm:text-sm font-medium mr-2 sm:mr-3 text-gray-900 dark:text-white">
                       {String.fromCharCode(65 + index)}
                     </span>
-                    <span className="text-gray-900 dark:text-white">{choice.text}</span>
+                    <span className="text-sm sm:text-base text-gray-900 dark:text-white">{choice.text}</span>
                   </div>
                 </button>
               ))}
@@ -98,31 +96,31 @@ export default function QuizCard({
 
         {/* 裏面: 結果と解説 */}
         <div className="card-face card-back">
-          <div className="p-8">
+          <div className="p-4 sm:p-6 md:p-8">
             {/* 結果表示 */}
-            <div className="mb-6 text-center">
+            <div className="mb-4 sm:mb-6 text-center">
               {isCorrect ? (
                 <div className="text-green-600 dark:text-green-400">
-                  <div className="text-6xl mb-2">✓</div>
-                  <div className="text-2xl font-bold">正解！</div>
+                  <div className="text-4xl sm:text-6xl mb-2">✓</div>
+                  <div className="text-xl sm:text-2xl font-bold">正解!</div>
                 </div>
               ) : (
                 <div className="text-red-600 dark:text-red-400">
-                  <div className="text-6xl mb-2">✗</div>
-                  <div className="text-2xl font-bold">不正解</div>
+                  <div className="text-4xl sm:text-6xl mb-2">✗</div>
+                  <div className="text-xl sm:text-2xl font-bold">不正解</div>
                 </div>
               )}
             </div>
 
             {/* 正解の選択肢 */}
-            <div className="mb-6">
-              <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">正解</div>
-              <div className="p-4 bg-green-50 dark:bg-green-900/30 border-2 border-green-500 rounded-lg">
+            <div className="mb-4 sm:mb-6">
+              <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-2">正解</div>
+              <div className="p-3 sm:p-4 bg-green-50 dark:bg-green-900/30 border-2 border-green-500 rounded-lg">
                 <div className="flex items-center">
-                  <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-green-500 text-white rounded-full text-sm font-medium mr-3">
+                  <span className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-green-500 text-white rounded-full text-xs sm:text-sm font-medium mr-2 sm:mr-3">
                     {String.fromCharCode(65 + question.correct_index)}
                   </span>
-                  <span className="text-gray-900 dark:text-white font-medium">
+                  <span className="text-sm sm:text-base text-gray-900 dark:text-white font-medium">
                     {question.choices[question.correct_index].text}
                   </span>
                 </div>
@@ -130,18 +128,18 @@ export default function QuizCard({
             </div>
 
             {/* 解説 */}
-            <div className="mb-6">
-              <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">解説</div>
-              <div className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                <div className="font-bold text-gray-900 dark:text-white mb-2">{term.term}</div>
-                <div className="text-gray-700 dark:text-gray-300 text-sm">{term.short_desc}</div>
+            <div className="mb-4 sm:mb-6">
+              <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-2">解説</div>
+              <div className="p-3 sm:p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                <div className="font-bold text-sm sm:text-base text-gray-900 dark:text-white mb-2">{term.term}</div>
+                <div className="text-gray-700 dark:text-gray-300 text-xs sm:text-sm">{term.short_desc}</div>
               </div>
             </div>
 
             {/* 次へボタン */}
             <button
               onClick={handleNext}
-              className="w-full py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+              className="w-full py-2.5 sm:py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors text-sm sm:text-base"
             >
               次へ
             </button>
@@ -160,9 +158,21 @@ export default function QuizCard({
         .quiz-card {
           position: relative;
           width: 100%;
-          min-height: 500px;
+          min-height: 380px;
           transform-style: preserve-3d;
           transition: transform 0.6s;
+        }
+
+        @media (min-width: 640px) {
+          .quiz-card {
+            min-height: 450px;
+          }
+        }
+
+        @media (min-width: 768px) {
+          .quiz-card {
+            min-height: 500px;
+          }
         }
 
         .quiz-card.flipped {

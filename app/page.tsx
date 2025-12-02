@@ -55,19 +55,21 @@ export default function Home() {
         />
 
         {/* メインコンテンツ */}
-        <main className="flex-1 p-6">
+        <main className="flex-1 p-4 md:p-6">
           <div className="max-w-7xl mx-auto">
             {/* 検索バー + コントロール */}
-            <div className="mb-6 flex gap-3">
+            <div className="mb-4 md:mb-6 flex flex-col sm:flex-row gap-3">
               <div className="flex-1">
                 <SearchBar
                   value={searchQuery}
                   onChange={searchTerms}
                 />
               </div>
-              <SearchPrecisionControl />
-              <SortControl />
-              <ViewToggle />
+              <div className="flex gap-2 justify-end">
+                <SearchPrecisionControl />
+                <SortControl />
+                <ViewToggle />
+              </div>
             </div>
 
             {/* 用語一覧 */}
