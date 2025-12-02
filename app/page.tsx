@@ -70,7 +70,7 @@ export default function Home() {
                   onChange={searchTerms}
                 />
               </div>
-              <div className="flex gap-2 justify-end">
+              <div className="grid grid-cols-2 gap-2 md:flex md:gap-2 md:justify-end">
                 {/* フィルタボタン (モバイルのみ) */}
                 <button
                   onClick={() => setIsFilterOpen(true)}

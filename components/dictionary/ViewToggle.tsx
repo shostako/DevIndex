@@ -6,7 +6,7 @@ export function ViewToggle() {
   const { viewMode, setViewMode } = useUIStore();
 
   return (
-    <div className="flex items-center gap-1 bg-gray-100 dark:bg-gray-700 rounded-md p-1">
+    <div className="flex items-center justify-center gap-1 bg-gray-100 dark:bg-gray-700 rounded-md p-1 w-full md:w-auto">
       <button
         onClick={() => setViewMode('card')}
         className={`px-3 py-1.5 rounded text-sm font-medium transition-colors ${
