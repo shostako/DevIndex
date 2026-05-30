@@ -2,7 +2,7 @@
 
 ## 現在の状態
 - **最終更新**: 2025-12-02
-- **アクティブタスク**: なし（Phase 1-3完了、安定運用中）
+- **アクティブタスク**: なし（Phase 1-3完了、モバイルUI改善完了）
 
 ## 完了済み
 - [x] Phase 1: 辞書機能（検索・フィルタ・詳細表示）
@@ -22,6 +22,7 @@
     - FilterContent.tsx: 共通フィルタコンテンツ
     - BottomSheet.tsx: 汎用ボトムシートコンポーネント
     - Sidebar.tsx: デスクトップ専用に簡素化
+  - **コントロール2x2グリッド配置**（モバイルでフィルタ/精度/並び替え/表示を2行表示）
 
 ## 未完了・保留
 - [ ] 初回ユーザー向けのオンボーディング画面
@@ -37,11 +38,12 @@
   - WSL環境では`-H 0.0.0.0`オプションが必要（Windows側からのアクセス）
   - アルファベット用語の読み仮名問題は学習効果が低い → 除外
   - Tailwindブレークポイント: `sm:640px`, `md:768px`, `lg:1024px`
+  - **重要**: 水平スクロール発生時はビューポート幅が広がるため、`sm:`よりも`md:`を使う方が安全
 - **参照すべきリソース**:
-  - `/home/shostako/ClaudeCode/DevIndex/logs/2025-11.md`（詳細な実装ログ）
+  - `/home/shostako/ClaudeCode/DevIndex/logs/2025-12.md`（12月の実装ログ）
+  - `/home/shostako/ClaudeCode/DevIndex/logs/2025-11.md`（11月の実装ログ）
   - `/home/shostako/ClaudeCode/DevIndex/docs/srs-algorithm.md`（SM-2仕様）
 
 ## 直近のGitコミット
-- 23529b2: feat: PROGRESS.md導入によるセッション間引き継ぎ改善
-- e26fb70: クイズ出題ロジック改善 + グローバルデータ初期化
-- dbadb61: sarcastic_notes 全数点検完了
+- cd84ce4 feat: モバイルでコントロールを2x2グリッド配置
+- e81f2f8 fix: ラベル非表示のブレークポイントをsm→mdに変更
